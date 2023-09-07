@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_M99_PA_IT0001_WO_IT0008</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Casuals without casual loading</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>ZHRPY_PCC_MSG</MSG_ID>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Reason</ENTRY>
+     <LENGTH>128</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Subtyp &amp; fehlt</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FIELD_PREFIX_NUMBER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_LGART_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_LGART_02</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ITEMID_IT01_WITHOUT_IT08</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Result Object Details Item ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_FILTER_LGART_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_FILTER_LGART_02</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

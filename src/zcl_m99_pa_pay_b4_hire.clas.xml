@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_M99_PA_PAY_B4_HIRE</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Pay Before Hire Date</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>ZHRPY_PCC_MSG</MSG_ID>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Reason</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Subtyp &amp; fehlt</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_DATE_TYPE_FOUND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Find a Date Type in IT0041 structure</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FIELD_PREFIX_DATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FIELD_PREFIX_DATE_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ITEMID_PAY_B4_HIRE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Result Object Details Item ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_PAYROLL_AREA_ALL_Q</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Area</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_IT41_DATE_TYPE_FOR_HIRE_DT</CMPNAME>
+     <SCONAME>IV_MOLGA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Country Grouping</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_IT41_DATE_TYPE_FOR_HIRE_DT</CMPNAME>
+     <SCONAME>RV_DATE_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Date type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_DATE_TYPE_FOUND</CMPNAME>
+     <SCONAME>EV_DATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Date for date type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_DATE_TYPE_FOUND</CMPNAME>
+     <SCONAME>IV_DATE_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Date type</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

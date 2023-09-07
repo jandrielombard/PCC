@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_M13_PA_IT0220_FIELDS</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Infotype 0220 validation</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>ZHRPY_PCC_MSG</MSG_ID>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Reason</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Record validity</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Contr. %</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Contr. $</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>No Influence flag</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Exclusion Flag</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>Medic. Class.</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Subtyp &amp; fehlt</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Grund</ENTRY>
+       <LENGTH>16</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DEFAULT_CONTRIBUTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get default contribution for an IT0220 record</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_EXC_FILTER_SUBTY_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_EXC_FILTER_TRFAR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_EXC_FILTER_TRFGB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_CONAM_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_CONAM_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_DEFINED_BENEFITS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_DPCON_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_DPCON_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_EMP_INFLUENCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_EXCLUSION_FLAG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_SUBTY_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_TRFAR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_TRFGB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_INFTY_SUPER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Infotype</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ITEMID_IT0220_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Result Object Details Item ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_NO</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>No</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_YES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Yes</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_INFTY_ACCESS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>HR: Master Data, Simple Access to Simple Infotypes</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_CONAM</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_DPCON</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_EEINF</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_EXCLF</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_MEDCL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_TRFAR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_FILTER_TRFGB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_FILTER_SUBTY_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DEFAULT_CONTRIBUTION</CMPNAME>
+     <SCONAME>IS_PSKEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Keys for HR Master Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DEFAULT_CONTRIBUTION</CMPNAME>
+     <SCONAME>RV_DPCON</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Superannuation Default Contribution Percentage</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

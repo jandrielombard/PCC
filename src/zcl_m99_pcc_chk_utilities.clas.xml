@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_M99_PCC_CHK_UTILITIES</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>WOW PCC Check Utilities</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADJUST_SPLIT_SELECTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Dustribute validation jobs evenly by the load category</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_IT0008_WAGETYPE_DTLS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read IT0008 Wage type Details</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_PAYROLL_AREA_PERNR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read All Employees for the Payroll Area</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADJUST_SPLIT_SELECTION</CMPNAME>
+     <SCONAME>CT_SEL_PARAMS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection parameters table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADJUST_SPLIT_SELECTION</CMPNAME>
+     <SCONAME>IV_SPLIT_PARAM</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ABAP/4: Name of SELECT-OPTION / PARAMETER</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_IT0008_WAGETYPE_DTLS</CMPNAME>
+     <SCONAME>ET_IT0008_LGART</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Wage Type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_IT0008_WAGETYPE_DTLS</CMPNAME>
+     <SCONAME>IS_P0008</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>HR Master Record: Infotype 0008 (Basic Pay)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_PAYROLL_AREA_PERNR</CMPNAME>
+     <SCONAME>CT_PERNR_SO</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>rsparams Table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_PAYROLL_AREA_PERNR</CMPNAME>
+     <SCONAME>IT_PAR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Result Parameter List</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

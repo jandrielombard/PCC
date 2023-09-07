@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_M99_PA_IT2010_CHNG</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Infotype 2010 Changes</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_NUM_HIGH_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_NUM_LOW_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_NUM_HIGH_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number High 01</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_NUM_LOW_01</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number Low 01</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
