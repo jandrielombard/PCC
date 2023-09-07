@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZHRPY_DE_PCC_OBJDATA</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <HEADLEN>15</HEADLEN>
+    <SCRLEN1>09</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>15</SCRLEN3>
+    <DDTEXT>PCC Object Data</DDTEXT>
+    <REPTEXT>PCC Object Data</REPTEXT>
+    <SCRTEXT_S>PCC Obj D</SCRTEXT_S>
+    <SCRTEXT_M>PCC Object Data</SCRTEXT_M>
+    <SCRTEXT_L>PCC Object Data</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <DATATYPE>RSTR</DATATYPE>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>
