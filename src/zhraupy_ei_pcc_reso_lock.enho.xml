@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>CLASENH</TOOL>
+   <SHORTTEXT>Enhanced Code for PYD_D_RESO Table Lock</SHORTTEXT>
+   <CLASS>CL_PYD_RESULT_RT</CLASS>
+   <OWR_METHODS>
+    <ENHAMETHKEYS>
+     <METHKEY>
+      <CLSNAME>IF_PYD_RESULT_RT</CLSNAME>
+      <CMPNAME>RESULT_OBJECT_LOCK_BY_RESKEY</CMPNAME>
+     </METHKEY>
+    </ENHAMETHKEYS>
+   </OWR_METHODS>
+   <TAB_ATTRIBUTES>
+    <ENHCLASSATTRIB>
+     <CLSNAME>CL_PYD_RESULT_RT</CLSNAME>
+     <CMPNAME>%_ZHRAUPY_EI_PCC_RESO_LOCK</CMPNAME>
+     <DESCRIPT>SAP-generated, not changeable!</DESCRIPT>
+     <STATE>1</STATE>
+     <EDITORDER>1</EDITORDER>
+     <TYPTYPE>3</TYPTYPE>
+     <TYPE>OBJECT</TYPE>
+     <LOCKED>X</LOCKED>
+    </ENHCLASSATTRIB>
+   </TAB_ATTRIBUTES>
+   <SOTR>
+    <item>
+     <HEADER>
+      <CONCEPT>00163EC3E8C11EECA3F62E91C6F90814</CONCEPT>
+      <CREA_LAN>E</CREA_LAN>
+      <TRALA_TYPE>1</TRALA_TYPE>
+      <OBJID_VEC>AAI=</OBJID_VEC>
+     </HEADER>
+     <ENTRIES>
+      <SOTR_TEXT>
+       <CONCEPT>00163EC3E8C11EECA3F62E91C6F90814</CONCEPT>
+       <LANGU>E</LANGU>
+       <LFD_NUM>0001</LFD_NUM>
+       <FLAG_CNTXT>X</FLAG_CNTXT>
+       <STATUS>R</STATUS>
+       <LENGTH>059</LENGTH>
+       <TEXT>Enhanced Code for PYD_D_RESO Table Lock</TEXT>
+      </SOTR_TEXT>
+     </ENTRIES>
+    </item>
+    <item>
+     <HEADER>
+      <CONCEPT>00163EC3E8C11EECA3F63509A9E34861</CONCEPT>
+      <CREA_LAN>E</CREA_LAN>
+      <TRALA_TYPE>1</TRALA_TYPE>
+      <OBJID_VEC>AAI=</OBJID_VEC>
+     </HEADER>
+     <ENTRIES>
+      <SOTR_TEXT>
+       <CONCEPT>00163EC3E8C11EECA3F63509A9E34861</CONCEPT>
+       <LANGU>E</LANGU>
+       <LFD_NUM>0001</LFD_NUM>
+       <FLAG_CNTXT>X</FLAG_CNTXT>
+       <STATUS>R</STATUS>
+       <LENGTH>045</LENGTH>
+       <TEXT>SAP-generated, not changeable!</TEXT>
+      </SOTR_TEXT>
+     </ENTRIES>
+    </item>
+   </SOTR>
+   <SOTR_USE>
+    <SOTR_USE>
+     <PGMID>R3TR</PGMID>
+     <OBJECT>ENHO</OBJECT>
+     <OBJ_NAME>ZHRAUPY_EI_PCC_RESO_LOCK</OBJ_NAME>
+     <CONCEPT>00163EC3E8C11EECA3F62E91C6F90814</CONCEPT>
+     <LFD_NUM>0001</LFD_NUM>
+    </SOTR_USE>
+    <SOTR_USE>
+     <PGMID>R3TR</PGMID>
+     <OBJECT>ENHO</OBJECT>
+     <OBJ_NAME>ZHRAUPY_EI_PCC_RESO_LOCK</OBJ_NAME>
+     <CONCEPT>00163EC3E8C11EECA3F63509A9E34861</CONCEPT>
+     <LFD_NUM>0001</LFD_NUM>
+    </SOTR_USE>
+   </SOTR_USE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

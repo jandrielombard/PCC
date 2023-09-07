@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZHRAUREPY_DECLUSTER_RESULTS</NAME>
+    <DBAPL>P</DBAPL>
+    <DBNA>PN</DBNA>
+    <SUBC>1</SUBC>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>PNP</LDBNAME>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Runtime details</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Double-click for the table content</ENTRY>
+     <LENGTH>68</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Decluster tables report</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TEST</KEY>
+     <ENTRY>Test Payroll</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZHRAUREPY_DECLUSTER_RESULTS</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0010</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00035</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZHRAUREPY_DECLUSTER_RESULTS</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00010</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The purpose of this transaction (ZHRPYC_PCC_DECLUSTER) is to enable</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Payroll users to view and analyse the Test/Live Payroll results created</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>by the PCC Processing templates where a Test Payroll processing step is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>being performed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This transaction will display current payroll results per individual</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>employee for the payroll period selected and related retros.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This transaction is supported by the custom table ZHRPY_PCC_TABLES that</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will hold the declustered tables used for display by the transaction.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>This table is maintainable via transaction SM31 and supports the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following information:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Cluster table : PCL2</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Cluster ID: (RQ,CU,NZ)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Note: B2 is not recommended to be used, please use the results for Time</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>from transaction PT66</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transparent table : (P2RX_AB)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Based on the selection criteria, employee is fetched, together with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>config entries from ZHRPY_PCC_TABLES and sequence numbers from either</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>HRDCT_TPY_RGDIR or P2RX_EVAL_PERIOD - to construct main ALV grid.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The retrieval of the results will be from the transparent tables. The</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>checkbox governs if the results are being retrieved based on the test</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>payroll result or the live results from a productive run.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Check Box: “Test Payroll”</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>When flagged, the report will retrieve test payroll results by using</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>HRDCT_TPY_RGDIR which stores information for test payroll results.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>When not flagged, it will retrieve live payroll results by using table</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>P2RX_EVAL_PERIOD which stores information for productive payroll results</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Both registry tables hold the sequence numbers that map to the sequence</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>number in the RT table (P2RX_RT). Test results are stored in the range</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>starting from “99001”. These are overwritten each time a test payroll is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> run. Live results are stored in the regular sequential sequence other</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>than the range starting with ‘9’.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Personnel Number field is mandatory and is capped at 20 entries</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

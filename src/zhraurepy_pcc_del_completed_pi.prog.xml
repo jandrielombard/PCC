@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZHRAUREPY_PCC_DEL_COMPLETED_PI</NAME>
+    <SUBC>1</SUBC>
+    <APPL>P</APPL>
+    <RSTAT>P</RSTAT>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>ZHRAUREPY_PCC_DEL_COMPLETED_PI</PROGRAM>
+      <SCREEN>0100</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Complete Process Instance List</DESCRIPT>
+      <TYPE>N</TYPE>
+      <NEXTSCREEN>0100</NEXTSCREEN>
+      <LINES>027</LINES>
+      <COLUMNS>120</COLUMNS>
+      <NO_TOOLBAR>X</NO_TOOLBAR>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+      <RPY_DYCATT>
+       <TYPE>CUST_CTRL</TYPE>
+       <NAME>ALV_COMPLETE_PI</NAME>
+       <ELEMENT_OF>SCREEN</ELEMENT_OF>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>120</LENGTH>
+       <HEIGHT>027</HEIGHT>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <NAME>G_OK_CODE</NAME>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE pbo100.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW/>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE pai100.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+    </item>
+   </DYNPROS>
+   <CUA>
+    <ADM>
+     <ACTCODE>000001</ACTCODE>
+     <MENCODE>000006</MENCODE>
+     <PFKCODE>000001</PFKCODE>
+    </ADM>
+    <STA>
+     <RSMPE_STAT>
+      <CODE>MAIN</CODE>
+      <MODAL>D</MODAL>
+      <ACTCODE>000001</ACTCODE>
+      <PFKCODE>000001</PFKCODE>
+      <BUTCODE>0001</BUTCODE>
+      <INT_NOTE>Main Output</INT_NOTE>
+     </RSMPE_STAT>
+    </STA>
+    <FUN>
+     <RSMPE_FUNT>
+      <CODE>DELE</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_DELETE</TEXT_NAME>
+      <ICON_ID>@11@</ICON_ID>
+      <FUN_TEXT>Delete</FUN_TEXT>
+      <INFO_TEXT>Delete Selected Process Instances</INFO_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>E</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Back</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>ECAN</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_CANCEL</TEXT_NAME>
+      <ICON_ID>@0W@</ICON_ID>
+      <FUN_TEXT>Cancel</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>ENDE</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Exit</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>REFRESH</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_OKAY</TEXT_NAME>
+      <ICON_ID>@0V@</ICON_ID>
+      <FUN_TEXT>Refresh</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>SAVE</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_SYSTEM_SAVE</TEXT_NAME>
+      <ICON_ID>@2L@</ICON_ID>
+      <FUN_TEXT>Save</FUN_TEXT>
+      <ICON_TEXT>Save</ICON_TEXT>
+     </RSMPE_FUNT>
+    </FUN>
+    <MEN>
+     <RSMPE_MEN>
+      <CODE>000004</CODE>
+      <NO>01</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>E</REF_CODE>
+      <REF_NO>001</REF_NO>
+     </RSMPE_MEN>
+    </MEN>
+    <MTX>
+     <RSMPE_MNLT>
+      <CODE>000001</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>INFO</TEXT>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000002</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>&lt;Object&gt;</TEXT>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000003</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Edit</TEXT>
+      <PATH>E</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000004</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Goto</TEXT>
+      <PATH>G</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000005</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Extras</TEXT>
+      <PATH>A</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000006</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Environment</TEXT>
+      <PATH>V</PATH>
+      <INT_NOTE>Standard Supplement</INT_NOTE>
+     </RSMPE_MNLT>
+    </MTX>
+    <ACT>
+     <RSMPE_ACT>
+      <CODE>000001</CODE>
+      <NO>01</NO>
+      <MENUCODE>000004</MENUCODE>
+     </RSMPE_ACT>
+    </ACT>
+    <PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>00</PFNO>
+      <FUNCODE>REFRESH</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>03</PFNO>
+      <FUNCODE>E</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>11</PFNO>
+      <FUNCODE>SAVE</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>12</PFNO>
+      <FUNCODE>ECAN</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>15</PFNO>
+      <FUNCODE>ENDE</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+    </PFK>
+    <SET>
+     <RSMPE_STAF>
+      <STATUS>MAIN</STATUS>
+      <FUNCTION>E</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>MAIN</STATUS>
+      <FUNCTION>ECAN</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>MAIN</STATUS>
+      <FUNCTION>ENDE</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>MAIN</STATUS>
+      <FUNCTION>REFRESH</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>MAIN</STATUS>
+      <FUNCTION>SAVE</FUNCTION>
+     </RSMPE_STAF>
+    </SET>
+    <DOC>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>A</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>Main Output</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>P</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>Main Output</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>B</OBJ_TYPE>
+      <OBJ_CODE>000001</OBJ_CODE>
+      <SUB_CODE>0001</SUB_CODE>
+      <INT_NOTE>Main Output</INT_NOTE>
+     </RSMPE_ATRT>
+    </DOC>
+    <TIT>
+     <RSMPE_TITT>
+      <CODE>TITLE</CODE>
+      <TEXT>Delete Completed Process Instances</TEXT>
+     </RSMPE_TITT>
+    </TIT>
+   </CUA>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Completed Process Instances that can be deleted</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Completed Process Instances that cannot be deleted</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Process Name</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Process Instance Name</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Time Selection Parameter Value</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Completion Time Stamp</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>Info</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Message Text</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Test Run - Process instances not deleted from DB</ENTRY>
+     <LENGTH>96</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>Update Run - Process instances deleted from DB</ENTRY>
+     <LENGTH>92</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B01</KEY>
+     <ENTRY>Delete All</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>D01</KEY>
+     <ENTRY>Confirm Deletion?</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Payroll Control Center - Delete Completed Process Instances</ENTRY>
+     <LENGTH>59</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ENDDA</KEY>
+     <ENTRY>Proc Instances Complete Before</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TEST</KEY>
+     <ENTRY>Test Run ( No Deletion )</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PID</KEY>
+     <ENTRY>Process ID&apos;s</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Abgeschlossene Prozessinstanzen, die gelöscht werden können</ENTRY>
+       <LENGTH>60</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Abgeschl. Prozessinstanzen, die nicht gelöscht werden können</ENTRY>
+       <LENGTH>60</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Name des Prozesses</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Name der Prozessinstanz</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Selektionsparameterwert für die Zeit</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Zeitstempel Abschluss</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>007</KEY>
+       <ENTRY>Info</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Meldungstext</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>B01</KEY>
+       <ENTRY>Alle löschen</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>D01</KEY>
+       <ENTRY>Löschen bestätigen?</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Abrechnungs-Control-Center: Abgeschlossene Objektinstanzen löschen</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_ENDDA</KEY>
+       <ENTRY>Enddatum Prozessinstanzen vor</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PID</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZHRAUREPY_PCC_DEL_COMPLETED_PI</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0003</VERSION>
+      <TXTLINES>00077</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZHRAUREPY_PCC_DEL_COMPLETED_PI</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Report können Sie als Systemadministrator des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Abrechnungs-Control-Centers abgeschlossene Prozessinstanzen, deren &lt;ZH&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Enddatum&lt;/&gt; vor einem angegebenen Datum liegt, anzeigen und löschen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beachten Sie, dass es sich beim Enddatum eher um das Fälligkeitsdatum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>als um das Abschlussdatum der Prozessinstanz handelt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Indem Sie abgeschlossene Prozessinstanzen, die nicht länger benötigt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden, löschen, reduzieren Sie die Anzahl von Prozessinstanzen, die bei</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>jedem Start der App &lt;LS&gt;Prozessmanagement&lt;/&gt; geladen werden. Auf diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Weise wird die Performance der App verbessert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Hierbei handelt es sich um ein Backend-Administrations-Tool für das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Abrechnungs-Control-Center.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Um &lt;ZH&gt;anstehende &lt;/&gt;Prozessinstanzen zu löschen, können Sie den Report</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Prozessinstanzen generieren&lt;/&gt; (&lt;AB&gt;PYC_GENERATE_PROC_INSTANCE&lt;/&gt;)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>oder die App für die vereinfachte Konfiguration von Prozessen im</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Frontend verwenden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Um diesen Report auszuführen, benötigen Sie im Berechtigungsobjekt &lt;AB&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>P_PYD_AAUT&lt;/&gt; (Framework Abrechnungsdatenque: Verwaltung) die folgende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Berechtigung:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>&lt;AB&gt;P_PYD_AAUT&lt;/&gt; -  04 (Reports starten)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beachten Sie, dass auch der Audit-Trail gelöscht wird. Wenn Sie den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Audit-Trail sichern möchten, stellen Sie demnach sicher, dass Sie dies</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vor dem Löschen der Prozessinstanzen tun.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Prozess-ID</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Die Prozessinstanz für die angegebene Prozess-ID wird selektiert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Prozessinstanzen beendet vor</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Geben Sie das Enddatum der Prozessinstanzen ein (z.B. Ende der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Abrechnungsperiode). Alle abgeschlossenen Prozessinstanzen, deren End</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>datum auf oder vor das angegebene Datum fällt, werden vom Report</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgeführt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beide Felder sind Mussfelder.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nachdem Sie den Report ausgeführt haben, werden die abgeschlossenen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanzen in zwei Kategorien unterteilt:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Prozessinstanzen, die gelöscht werden können</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Alle abgeschlossenen Prozessinstanzen, deren Enddatum auf oder vor das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>angegebene Datum fällt, können gelöscht werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Prozessinstanzen, die nicht gelöscht werden können</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Wenn für denselben Prozess vor einer abgeschlossenen Prozessinstanz</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanzen in der Ausführung oder anstehende Prozessinstanzen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vorhanden sind, kann die abgeschlossene Prozessinstanz nicht gelöscht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden. Hiermit soll eine Lücke zwischen Prozessinstanzen vermieden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Diese Prozessinstanzen werden in der Reihenfolge ihres Enddatums</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgeführt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für die Liste der abgeschlossenen Prozessinstanzen, die gelöscht werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>können, ist die Drucktaste &lt;LS&gt;Alle löschen&lt;/&gt; verfügbar.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wählen Sie die Drucktaste &lt;LS&gt;Alle löschen &lt;/&gt;und bestätigen Sie die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Löschung. Die aufgeführten Prozessinstanzen werden dann gelöscht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AM</TDFORMAT>
+       <TDLINE>Hinweis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie können nicht wählen, ob Sie nur eine oder einige der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanzen in der Liste löschen möchten. Mit der Drucktaste &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Alle löschen&lt;/&gt; werden alle abgeschlossenen Prozessinstanzen auf dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ausgabebild gelöscht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Audit-Trail für die entsprechenden Prozessinstanzen wird ebenfalls</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gelöscht. Wenn Sie den Audit-Trail sichern möchten, stellen Sie demnach</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sicher, dass Sie dies vor dem Löschen der Prozessinstanzen tun.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Löscung erfolgreich ist, werden die folgenden Objekte mit Bezug</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zu den Prozessinstanzen gelöscht:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ergebnisobjekt für Prozessinstanzlevel und entsprechende Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(PYD_D_RESO und PYD_D_RESP)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ergebnisobjekt für Prozessschrittgruppen-Instanz und entsprechende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Parameterlisten (PYD_D_RESO and PYD_D_RESP)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ergebnisobjekt für Schrittinstanzen und entsprechende Parameterlisten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(PYD_D_RESO and PYD_D_RESP)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ergebnisobjekthistorie (PYD_D_RESOH)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>In Schattenlauf generiertes Ergebnisobjekt (z.B. Validierung von Alerts,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Event Handler) (PYD_D_RESOS)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Prozesshistorien (Aktionsprotokolle und Aktionsprotokollpositionen)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(PYD_D_AL und PYD_D_ALI)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Team-Monitoring-Prozess (PYC_D_PYPTM_ALT)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Wenn der Prozesskontext aktiviert wurde (d.h. dass Validierungsregeln</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Prozess-ID und die Prozessinstanz-ID als ihre alleinigen E</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>ingabeparameter aufweisen, auf deren Grundlage die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Validierungsregelinstanzen generiert werden), beziehen sich die Alerts,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die KPIs und andere relevante Objekte auf die Prozessinstanz-ID. Aus</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>diesem Grund werden diese Alerts, KPIs, Filter und Objekte ebenfalls ge</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>löscht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Wenn kein Prozesskontext aktiviert wurde, wird nichts gelöscht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AM</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZHRAUREPY_PCC_DEL_COMPLETED_PI</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00071</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZHRAUREPY_PCC_DEL_COMPLETED_PI</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This report enables you, as system admin of Payroll Control Center, to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>display and delete completed process instances whose &lt;ZH&gt;end date&lt;/&gt; is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>before a specified date. Note that end date is the due date, rather than</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the completion date, of the process instance.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>By deleting completed process instances that are no longer needed, you</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>reduce the number of process instances that are loaded every time the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Process Management&lt;/&gt; app is started. This improves the performance</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of the app.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This is a backend administration tool for Payroll Control Center.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>To delete &lt;ZH&gt;upcoming &lt;/&gt;process instances, you can use the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Generate Process Instances&lt;/&gt; (&lt;AB&gt;PYC_GENERATE_PROC_INSTANCE&lt;/&gt;)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>report or use Simplified Configuration for Process app on the frontend.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>To run this report, you must have the following authorization in the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>authorization object &lt;AB&gt;P_PYD_AAUT&lt;/&gt; (Payroll Data Source Framework</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Administration):</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>&lt;AB&gt;P_PYD_AAUT&lt;/&gt; -  04 (Start Reports)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Note that the audit trail will also be deleted. Therefore, if you want</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>to back up the audit trail, make sure to do so before you delete the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>process instances.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process ID</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Process instance for the specified process ID will be selected.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process Instances Ended Before</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Specify end date of process instances (for example, Payroll Period End</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Date). All the completed process instances whose end date falls on or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>before the specified date will be listed by the report.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Both fields are mandatory.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>After you execute the report, the completed process instances are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>grouped into two categories:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process instances that can be deleted</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>All the completed process instances whose end date falls on or before</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the specified date can be deleted.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process instances that cannot be deleted</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>If there are in-execution or upcoming process instances before a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>completed process instance for the same process, the completed process</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>instance cannot be deleted. This is to avoid gap between process</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>instances.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>These process instances are listed in the order of their end date.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A &lt;LS&gt;Delete All&lt;/&gt; button is available for the list of completed</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>process instances that can be deleted.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Choose the &lt;LS&gt;Delete All &lt;/&gt;button and confirm deletion. Then the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>listed process instances will be deleted.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AM</TDFORMAT>
+       <TDLINE>Note</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>You cannot choose to delete only one or some of the process instances in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the list. The &lt;LS&gt;Delete All&lt;/&gt; button deletes all the completed process</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>instances on the output screen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The audit trail for the corresponding process instances will also be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>deleted. Therefore, if you want to back up the audit trail, make sure to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>do so before you delete the process instances.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>When the deletion is successful, the following objects related to the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>process instances are deleted:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process Instance Level Result Object and corresponding Parameters</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(PYD_D_RESO and PYD_D_RESP)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process Step Group Instance Result Object and corresponding Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Lists (PYD_D_RESO and PYD_D_RESP)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Step Instance Result Object and corresponding Parameter Lists</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(PYD_D_RESO and PYD_D_RESP)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Result Object History (PYD_D_RESOH)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Result Object generated in shadow run (e.g. validation of alert, event</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>handler) (PYD_D_RESOS)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process Histories (Action Logs and Action Log Items) (PYD_D_AL and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>PYD_D_ALI)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Team Monitoring process (PYC_D_PYPTM_ALT)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>If process context is enabled, (meaning that validation rules have</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>process ID and Process Instance ID as their sole input parameters based</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>on which the validation rule instances are generated,) the alerts, KPIs,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>filters and other relevant objects are related to the process instance</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ID. Therefore, these alerts, KPIs, filters and objects are also deleted.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>If process context is not enabled, nothing will be deleted.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AM</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
