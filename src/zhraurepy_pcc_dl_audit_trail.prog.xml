@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZHRAUREPY_PCC_DL_AUDIT_TRAIL</NAME>
+    <SUBC>1</SUBC>
+    <APPL>P</APPL>
+    <RSTAT>P</RSTAT>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>S01</KEY>
+     <ENTRY>Proc Instances Completed    From</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>S02</KEY>
+     <ENTRY>To</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T01</KEY>
+     <ENTRY>Choose a directory</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T02</KEY>
+     <ENTRY>Total number of downloaded files: &amp;1</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T03</KEY>
+     <ENTRY>Download statistics</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T04</KEY>
+     <ENTRY>Logical file path undefined: &amp;1</ENTRY>
+     <LENGTH>62</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T05</KEY>
+     <ENTRY>No files are downloaded.</ENTRY>
+     <LENGTH>46</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T06</KEY>
+     <ENTRY>No authorization to read process instance or history.</ENTRY>
+     <LENGTH>104</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>T07</KEY>
+     <ENTRY>Downloaded successfully</ENTRY>
+     <LENGTH>42</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Payroll Control Centre - Audit Trail Download</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ENDDA</KEY>
+     <ENTRY>Proc Inst Completed in Between</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_VARI</KEY>
+     <ENTRY>Audit Trail DL Program Variant</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PID</KEY>
+     <ENTRY>Process ID&apos;s</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>T01</KEY>
+       <ENTRY>Wählen Sie ein Verzeichnis</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T02</KEY>
+       <ENTRY>Gesamtanzahl heruntergeladener Dateien: &amp;1</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T03</KEY>
+       <ENTRY>Download-Statistiken</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T04</KEY>
+       <ENTRY>Logischer Dateipfad nicht definiert: &amp;1</ENTRY>
+       <LENGTH>62</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T05</KEY>
+       <ENTRY>Keine Dateien werden heruntergeladen.</ENTRY>
+       <LENGTH>46</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T06</KEY>
+       <ENTRY>Keine Berechtigung zum Lesen der Prozessinstanz oder -historie.</ENTRY>
+       <LENGTH>104</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>T07</KEY>
+       <ENTRY>Download erfolgreich</ENTRY>
+       <LENGTH>42</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Abrechnungs-Control-Center - Audit-Trail-Download-Werkzeug</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>C_PI</KEY>
+       <ENTRY>Prozesshistorie herunterladen</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>C_PI_AL</KEY>
+       <ENTRY>Alert-Historie herunterladen</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>C_PI_KPI</KEY>
+       <ENTRY>Analysehistorie herunterladen</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_DIR</KEY>
+       <ENTRY>Pfad für Verzeichnis</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_MAXROW</KEY>
+       <ENTRY>Max. Zeilenanz. pro Arbeitsbl.</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PI</KEY>
+       <ENTRY>Prozessinstanz-ID</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZHRAUREPY_PCC_DL_AUDIT_TRAIL</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <TXTLINES>00065</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZHRAUREPY_PCC_DL_AUDIT_TRAIL</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie verwenden diesen Report, um die folgenden Arten von Protokollen für</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aktive und abgeschlossene Prozesse in Audit Trail herunterzuladen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Prozesshistorie</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Alert-Historie</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Analysehistorie</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In Audit Trail können Sie die oben genannten Arten von Protokollen nur</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Reihe nach für jede Prozessinstanz-ID herunterladen. Mit diesem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Report können Sie einen Batch-Download aller Protokolle für ein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Intervall von Prozessinstanz-IDs durchführen und die Protokolle in einer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Excel-Datei im angegebenen Verzeichnis speichern. Für jede</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanz-ID wird eine Datei generiert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Wenn Sie einen Batch-Download des Audit-Trails durchführen möchten,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>müssen Sie im Customizing für das &lt;LS&gt;Abrechnungs-Control-Center&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>unter &lt;LS&gt;Allgemeine Einstellungen -&gt; Logische Dateipfade für Download</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Alert-Historie pflegen&lt;/&gt; einen logischen Dateipfad definieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Um den Audit-Trail für bestimmte Prozessinstanzen herunterzuladen,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>müssen Sie über die relevante Berechtigung im Berechtigungsobjekt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>P_PYD_INST verfügen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>P_PYD_INST – Berechtigungspräfix der Abrechnungsprozesse, gefolgt von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einem Asterisk (*). Also z.B. PY10*, PY99*. Das Berechtigungspräfix ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>definiert, wenn die Prozessarten oder die Abrechnungsprozesse angelegt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>P_PYD_IAUT – H (Aktionsprotokoll anzeigen), R (lesen)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Prozessinstanz-ID&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Geben Sie eine Prozessinstanz-ID oder ein Intervall von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanz-IDs ein. Für jede Prozessinstanz-ID wird eine Excel-Datei</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>generiert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Max. Zeilenanz. pro Arbeitsbl.&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Geben Sie die maximale Zeilenanzahl für jedes Arbeitsblatt in der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>heruntergeladenen Datei ein. Wenn Audit-Trail-Datensätze diesen Gr</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>enzwert erreichen und noch nicht die gesamte Historie für die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanz oder Wiederholung heruntergeladen wurde, erzeugt das Sy</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>stem ein neues Arbeitsblatt in der Datei, um die restliche Historie zu</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>speichern. Es gibt keinen Grenzwert in Bezug auf die Anzahl der für</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen Download erzeugten Dateien.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Verzeichnispfad&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Geben Sie einen Verzeichnispfad ein und das System speichert die Datei</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in diesem Verzeichnis auf Ihrem lokalen Laufwerk.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Alert-Historie herunterladen&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Diese Option ist standardmäßig aktiviert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Geben Sie an, ob Änderungen an Alerts oder Validierungsregeln einer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanz heruntergeladen werden sollen. Zur Alert-Historie gehört</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Folgendes:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ausführen einer Validierungsregel</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ändern eines Alert-Status</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Zuordnung von Alerts</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Lösungsvorgänge von Alerts</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Prozesshistorie herunterladen&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Geben Sie an, ob Sie Änderungen an den Schritten einer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Abrechnungsinstanz oder an der Abrechnungsinstanz selbst herunterladen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>möchten. Dazu gehören z.B. Schrittstatusänderungen und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Prozessinstanz-Statusänderungen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Analysehistorie herunterladen&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Geben Sie an, ob Sie die KPIs oder Analysedaten der Prozessinstanz</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>herunterladen möchten. Beachten Sie, dass die mit der Konfigurati</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>ons-Workbench angelegten Analysen und die über die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Konfigurationsverwaltung angelegten Analysen (auch KPIs genannt)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>unterschiedliche Strukturen und Felder besitzen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Das System zeigt die Downloadergebnisse im SAP List Viewer (ALV) an und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mindestens eine Excel-Datei wird in das angegebene Verzeichnis auf Ihrem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lokalen Laufwerk heruntergeladen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Die erste Spalte der ALV-Liste zeigt den Namen und den Pfad der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>heruntergeladenen Datei an.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Nachrichtentext</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>Diese Spalte enthält das Downloadergebnis.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZHRAUREPY_PCC_DL_AUDIT_TRAIL</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00060</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZHRAUREPY_PCC_DL_AUDIT_TRAIL</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>You use this report to download the following types of log for active</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and completed processes in Audit Trail:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Process history</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Alert history</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Analytics history</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In Audit Trail, you can only download each of the above types of logs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>for each process instance ID one by one. With this report, you can</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>download all these logs in batch for a range of process instance IDs and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>save the logs to an Excel file in the specified location. One file is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>generated for each process instance ID.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>If you want to download the audit trail in batch, you need to define</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>logical file path in Customizing for &lt;LS&gt;Payroll Control Center&lt;/&gt;,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>under &lt;LS&gt;General Settings -&gt; Maintain Logical File Paths for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Downloading Alert History&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>To download the audit trail for specific process instances, you must</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>have the relevant authorization in the authorization object P_PYD_INST.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>P_PYD_INST – Authorization prefix of payroll processes, followed with an</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>asterisk *. For example, PY10*, PY99*. Authorization prefix is defined</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>when process types or payroll processes are created.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>P_PYD_IAUT – H (Display Action Log), R (Read)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Process Instance ID&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Enter a process instance ID or a range of process instance ID. For each</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>process instance ID, one Excel file is generated.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Maximum Row No. per Worksheet&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Enter the maximum number of rows for each worksheet in the downloaded</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>file. If audit trail records reach this limit and there is more history</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>to be downloaded for the process instance/recurrence, the system creates</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>a new worksheet in the file to store the rest of the history. There is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>no limit to the number of files created for one download.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Directory Path&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Enter a directory path and the system stores the file to that directory</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in your local drive.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Download Alert History&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>This option is selected by default.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Specify whether you want to download the operation made to alerts or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>validation rules of a process instance. Alert history includes the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Execution of validation rule</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Change of alert status</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Assignment of alerts</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Solution operation of alerts</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Download Process History&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Specify whether you want to download the operation made to the steps of</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>a payroll instance or the payroll instance itself, such as step status</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>change and process instance status change.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Download Analytics History&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Specify whether you want to download the KPIs or analytics data of the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>process instance. Note that the analytics created using Configuration</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Workbench and the analytics (also called KPIs) created using Manage</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Configuration have different structures and fields.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The system displays the download results in an SAP List Viewer (ALV) and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>one or more Excel files are downloaded to the defined directory of your</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>local drive.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>The first column of the ALV list displays the downloaded file name and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>its path.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Message Text</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>This column lists the download result.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
