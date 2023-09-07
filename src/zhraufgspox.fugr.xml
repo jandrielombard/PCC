@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Spool extended functions</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZHRAUFGSPOXF01</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF02</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF03</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF04</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF05</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF06</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF07</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXF08</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXTOP</SOBJ_NAME>
+    <SOBJ_NAME>LZHRAUFGSPOXUTS</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZHRAUFGSPOX</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZHRPY_RETURN_ABAP_SPOOLJOB</FUNCNAME>
+     <SHORT_TEXT>Liefert eine ABAP-Spoolliste als interne Tabelle im ASCII-Format</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>RQIDENT</PARAMETER>
+       <DBFIELD>TSP01-RQIDENT</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FIRST_LINE</PARAMETER>
+       <DEFAULT>1</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>I</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>LAST_LINE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>I</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PAGES</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>C</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>LIST_OBJECT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>TABLE_ABAPLIST</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_SUCH_JOB</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>NOT_ABAP_LIST</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>JOB_CONTAINS_NO_DATA</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>SELECTION_EMPTY</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>NO_PERMISSION</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>CAN_NOT_ACCESS</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>READ_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>RQIDENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Spoolnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FIRST_LINE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Erste zu liefernde Zeile</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LAST_LINE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Letzte Zeile (0 = bis Ende)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PAGES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Seiten statt Zeilen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LIST_OBJECT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Container for a Packed List</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_SUCH_JOB</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Kein Spoolauftrag mit Nummer RQIDENT gefunden</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOT_ABAP_LIST</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Auftrag ist keine Liste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>JOB_CONTAINS_NO_DATA</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Auftrag ist leer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SELECTION_EMPTY</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Ausgewählter Bereich ist leer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_PERMISSION</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Berechtigung reicht nicht aus</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CAN_NOT_ACCESS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Typ kann nicht festgestellt werden</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>READ_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>kann Spooldaten nicht lesen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>000</KEY>
+       <ENTRY>Fehler in Operation:</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>AREA oder OP fehlt</ENTRY>
+       <LENGTH>18</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Bereich nicht bekannt</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Operation in Bereich nicht bekannt</ENTRY>
+       <LENGTH>34</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Fehler in Parametersatz der Operation</ENTRY>
+       <LENGTH>37</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Fehler im Wert eines Operartionsparameters</ENTRY>
+       <LENGTH>42</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Druckdatei</ENTRY>
+       <LENGTH>12</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>007</KEY>
+       <ENTRY>Daten</ENTRY>
+       <LENGTH>12</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Im Anhang finden Sie die von Ihnen angeforderte Druckdatei mit</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>der Nummer &amp;1 aus dem SAP-System &amp;2</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Ihre Druckdaten</ENTRY>
+       <LENGTH>15</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>011</KEY>
+       <ENTRY>unvollständige OTF-Daten</ENTRY>
+       <LENGTH>42</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>100</KEY>
+       <ENTRY>Anzeige</ENTRY>
+       <LENGTH>7</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>200</KEY>
+       <ENTRY>Download fehlgeschlagen</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>201</KEY>
+       <ENTRY>Lade PDF herunter...</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>202</KEY>
+       <ENTRY>Gesamtdatei konnte nicht erzeugt werden</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>203</KEY>
+       <ENTRY>Soll die PDF-Datei, die den Fehler verursacht, gespeichert werden?</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>204</KEY>
+       <ENTRY>Ja</ENTRY>
+       <LENGTH>12</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>205</KEY>
+       <ENTRY>Nein</ENTRY>
+       <LENGTH>14</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>SLS</KEY>
+       <ENTRY>Liste</ENTRY>
+       <LENGTH>5</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>
