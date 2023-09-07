@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SXCI" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SXCI>
+    <IMPLEMENTATION_DATA>
+     <IMP_NAME>ZPT_BLP_PCC_UPD_EHI</IMP_NAME>
+     <TEXT>PCC Update EHI from PTARQ</TEXT>
+     <IMP_CLASS>ZCL_IM_PT_BLP_PCC_UPD_EHI</IMP_CLASS>
+     <EXIT_NAME>PT_BLP_USER</EXIT_NAME>
+     <INTER_NAME>IF_EX_PT_BLP_USER</INTER_NAME>
+     <ACTIVE>X</ACTIVE>
+    </IMPLEMENTATION_DATA>
+    <FILTERS>
+     <item>
+      <FLT_VAL>PSV</FLT_VAL>
+     </item>
+    </FILTERS>
+   </SXCI>
+  </asx:values>
+ </asx:abap>
+</abapGit>
