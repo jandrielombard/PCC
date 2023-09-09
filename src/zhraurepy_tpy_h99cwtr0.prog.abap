@@ -23,7 +23,7 @@ report zhraurepy_tpy_h99cwtr0 no standard page heading.
 *-----------------------------------------------------------------------*
 *001 |08-10-2021 | 1130848  |PTX-3763 Initial creation      |CFAK900928 *
 *-----------------------------------------------------------------------*
-include zhraurepy_tpy_wtr_scr_def.   "MOD001++
+include zusehraurepy_tpy_wtr_scr_def.   "MOD001++
 *include h99cwtr0_scr_def.           "MOD001--
 
 include h99cwtr0_data_def.
@@ -117,6 +117,6 @@ end-of-selection.
   perform end_of_selection using driver excel_template alv_template
                                  grid_template excel lv grid.
 
-  include zhraurepy_tpy_wtr_forms.     "MOD001++
+  include zusehraurepy_tpy_wtr_forms.     "MOD001++
 *include h99cwtr0_forms.               "MOD001--
   include h99cwtr0_screen_2000.

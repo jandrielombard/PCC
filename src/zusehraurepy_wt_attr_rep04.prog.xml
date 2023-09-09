@@ -3,24 +3,20 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZHRAUREPY_TPY_WTR_SCR_DEF</NAME>
+    <NAME>ZUSEHRAUREPY_WT_ATTR_REP04</NAME>
     <SUBC>I</SUBC>
     <APPL>P</APPL>
-    <RLOAD>D</RLOAD>
+    <RSTAT>K</RSTAT>
+    <RLOAD>E</RLOAD>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
-   <I18N_TPOOL>
+   <TPOOL>
     <item>
-     <LANGUAGE>D</LANGUAGE>
-     <TEXTPOOL>
-      <item>
-       <ID>R</ID>
-       <ENTRY>Include H99CWTR0_SCR_DEF</ENTRY>
-       <LENGTH>24</LENGTH>
-      </item>
-     </TEXTPOOL>
+     <ID>R</ID>
+     <ENTRY>Include ZHRAUREPY_WT_ATTRIBUTES_REP04</ENTRY>
+     <LENGTH>37</LENGTH>
     </item>
-   </I18N_TPOOL>
+   </TPOOL>
   </asx:values>
  </asx:abap>
 </abapGit>

@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZHRAUREPY_TPY_WTR_FORMS</NAME>
+    <NAME>ZUSEHRAUREPY_TPY_WTR_SCR_DEF</NAME>
     <SUBC>I</SUBC>
     <APPL>P</APPL>
     <RLOAD>D</RLOAD>
@@ -15,8 +15,8 @@
      <TEXTPOOL>
       <item>
        <ID>R</ID>
-       <ENTRY>Include H99CWTR0_FORMS</ENTRY>
-       <LENGTH>22</LENGTH>
+       <ENTRY>Include H99CWTR0_SCR_DEF</ENTRY>
+       <LENGTH>24</LENGTH>
       </item>
      </TEXTPOOL>
     </item>

@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZHRAUREPY_WT_ATTRIBUTES_REP01</NAME>
+    <NAME>ZUSEHRAUREPY_WT_ATTR_REP02</NAME>
     <SUBC>I</SUBC>
     <APPL>P</APPL>
     <RSTAT>K</RSTAT>
@@ -13,7 +13,7 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Include ZHRAUREPY_WT_ATTRIBUTES_REP01</ENTRY>
+     <ENTRY>Include ZHRAUREPY_WT_ATTRIBUTES_REP02</ENTRY>
      <LENGTH>37</LENGTH>
     </item>
    </TPOOL>

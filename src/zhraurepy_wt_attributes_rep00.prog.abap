@@ -18,10 +18,10 @@
 *&---------------------------------------------------------------------*
 report zhraurepy_wt_attributes_rep00 message-id 54  line-size 132.
 
-include : zhraurepy_wt_attributes_rep01,
-          zhraurepy_wt_attributes_rep02,
-          zhraurepy_wt_attributes_rep03,
-          zhraurepy_wt_attributes_rep04.
+include : zusehraurepy_wt_attr_rep01,
+          zusehraurepy_wt_attr_rep02,
+          zusehraurepy_wt_attr_rep03,
+          zusehraurepy_wt_attr_rep04.
 *
 ***********************************
 * AT SELECTION SCREEN VALIDATION
@@ -77,4 +77,4 @@ end-of-selection.
     perform display_report tables <exceltab>.
   endif.
 
-  include :  zhraurepy_wt_attributes_rep05.
+  include :  zusehraurepy_wt_attr_rep05.

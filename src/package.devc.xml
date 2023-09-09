@@ -3,9 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DEVC>
-    <CTEXT>New Zealand PCC Implementation</CTEXT>
-    <COMP_POSID>PY</COMP_POSID>
-    <COMPONENT>HLA0009706</COMPONENT>
+    <CTEXT>Payroll control centre add-on</CTEXT>
    </DEVC>
   </asx:values>
  </asx:abap>

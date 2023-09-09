@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>PCC Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Employee Current PDC Re Calculation date           : &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Time Evaluation Executed using Variant             : &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Employee New PDC Re Calculation date               : &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Error in executing feature &amp;. Error: &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Unable to retrieve ALV data</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>&amp;1 - Hours = &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Process started for &amp;1 at Dt: &amp;2 T: &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Process ended   for &amp;1 at Dt: &amp;2 T: &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>&amp;1(&amp;2) for &amp;3 has been entered by user &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Time Evaluation Executed upto &amp;1 Only</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>&amp;1 &amp;2 changed in period</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>&amp;1(&amp;2) for &amp;3 has been entered by user &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>014</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>IT&amp;1 &amp;2 - Hours = &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>&amp;1 for &amp;2 Threshold &amp;3 exceeded by &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>D.O.B within period. TM turns &amp;1 years old.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Payroll retro back to period &amp;1.&amp;2. Number of retro periods = &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Wage type &amp;1 hours &amp;2.&amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Sum of Wagetype hours &amp;1.&amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Sum of Wagetype Amount &amp;1.&amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Wage type &amp;1 Amount &amp;2.&amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Region &amp;1 should not have Postcode beginning with a &amp;2 in subty &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Region not found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Incorrect Company Code / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Incorrect Personnel Area / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Incorrect Personnel Subrea / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Incorrect Employee Group / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Incorrect Employee Subgroup / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>IT7 &amp;-&amp; mismatch IT8 &amp;-&amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Incorrect Cost Center / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Incorrect Pay Scale Type / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Incorrect Pay Scale Area / Payroll area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Incorrect Pay Scale Type / Pay Scale Area / Pay Scale Area Combination</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>IT8 record &amp;1 - &amp;2 missing WT (&amp;3)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>&amp;1 found in the period with no time data records</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Invalid Tax File Number (TFN)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>&amp;1 - &amp;2 Weekly Hours = &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>&amp;1 - &amp;2 Amount = &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>does not equal</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>do not equal</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Period:     From: &amp;1  &amp;2         To: &amp;3  &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>is not &amp;1% of</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>IT0008 &amp;1 - &amp;2 contains MVA wage types that are commencing</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>IT0008 &amp;1 - &amp;2 contains MVA wage types that are ceasing</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>047</MSGNR>
+     <TEXT>&amp;1 &amp;2 - &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>048</MSGNR>
+     <TEXT>No process instances in Monitoring status</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>050</MSGNR>
+     <TEXT>Employee starts in &amp;1 payroll area before Technical date of entry (&amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>051</MSGNR>
+     <TEXT>Unable to retrieve ALV data</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>052</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>053</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>055</MSGNR>
+     <TEXT>Incorrect Superannuation record field values</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>056</MSGNR>
+     <TEXT>&amp;1 - &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>057</MSGNR>
+     <TEXT>&amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>058</MSGNR>
+     <TEXT>&amp;1  &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>059</MSGNR>
+     <TEXT>No payroll result exists</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>060</MSGNR>
+     <TEXT>&amp;1 (&amp;2) quota has remaining balance of &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>061</MSGNR>
+     <TEXT>Employee added to event handler</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>062</MSGNR>
+     <TEXT>Error in adding employee to event handler</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>063</MSGNR>
+     <TEXT>File download successful</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>065</MSGNR>
+     <TEXT>Termination record with no matching IT0000 Action</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>066</MSGNR>
+     <TEXT>Error in deleting file from server directory - No Authorization</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>067</MSGNR>
+     <TEXT>Error in deleting file from server directory - File Open Error</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>070</MSGNR>
+     <TEXT>Incorrect IT0007 time management status</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>071</MSGNR>
+     <TEXT>STC Tax Rate About to Expiry</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>075</MSGNR>
+     <TEXT>Missing IT0220 Super Guarantee fund</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>080</MSGNR>
+     <TEXT>IT14 &amp;1 valid in period</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>085</MSGNR>
+     <TEXT>&amp;1 (&amp;2) exists with payroll area change to different periodicity</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>090</MSGNR>
+     <TEXT>Incorrect IT7 Working Week value &amp;1 (&amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>091</MSGNR>
+     <TEXT>Response missing for task: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>092</MSGNR>
+     <TEXT>Error in Payroll Data Read for task: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>093</MSGNR>
+     <TEXT>Unable to open the file</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>094</MSGNR>
+     <TEXT>Error in downloading file</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>095</MSGNR>
+     <TEXT>File downloaded successfully</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>096</MSGNR>
+     <TEXT>&amp;1 exists without a balance owing</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZUSEHRPY_PCC_MSG</ARBGB>
+     <MSGNR>097</MSGNR>
+     <TEXT>Employee has &amp;1 from &amp;2 to &amp;3</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -3,20 +3,24 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZHRAUREPY_WT_ATTRIBUTES_REP05</NAME>
+    <NAME>ZUSEHRAUREPY_TPY_WTR_FORMS</NAME>
     <SUBC>I</SUBC>
     <APPL>P</APPL>
-    <RSTAT>K</RSTAT>
-    <RLOAD>E</RLOAD>
+    <RLOAD>D</RLOAD>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
-   <TPOOL>
+   <I18N_TPOOL>
     <item>
-     <ID>R</ID>
-     <ENTRY>Include ZHRAUREPY_WT_ATTRIBUTES_REP05</ENTRY>
-     <LENGTH>37</LENGTH>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Include H99CWTR0_FORMS</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+     </TEXTPOOL>
     </item>
-   </TPOOL>
+   </I18N_TPOOL>
   </asx:values>
  </asx:abap>
 </abapGit>
