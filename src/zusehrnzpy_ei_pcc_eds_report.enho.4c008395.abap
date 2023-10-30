@@ -1,5 +1,5 @@
 "Name: \PR:HNZLEMPD0\FO:DISPLAY_OUTPUT\SE:END\EI
-ENHANCEMENT 0 ZHRNZPY_EI_PCC_EDS_REPORT.
+ENHANCEMENT 0 ZUSEHRNZPY_EI_PCC_EDS_REPORT.
 *-----------------------------------------------------------------------*
 * Description   : This Enhancement to standard SAP program is to        *
 *                 display Error log Report during the batch execution   *

@@ -1,5 +1,5 @@
 "Name: \TY:CL_PYC_EVENT_HANDLER_BASE\IN:IF_PYC_EVENT_HANDLER\ME:EVENT_HANDLER_ITEM_GET_LIST\SE:END\EI
-ENHANCEMENT 0 ZHRAUPY_EI_PCC_EHEMPL_CONTROL.
+ENHANCEMENT 0 ZUSEHRAUPY_EI_PCC_EHEMPL_CONTR.
 *>>> Start of PTX-3763 - PCC Implementation - Event Handler Employee List Control
 *---------------------------------------------------------------------------------------------*
 *Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *

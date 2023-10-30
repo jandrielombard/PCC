@@ -1,5 +1,5 @@
 "Name: \TY:CL_PYC_TEAM_ACTIVE\ME:GET_ALERT_LIST_WITH_SPLIT\SE:BEGIN\EI
-ENHANCEMENT 0 ZHRAUPY_EI_ALERT_LIST_SQL.
+ENHANCEMENT 0 ZUSEHRAUPY_EI_ALERT_LIST_SQL.
 *---------------------------------------------------------------------------------------------*
 *Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *
 *---------------------------------------------------------------------------------------------*

@@ -1,5 +1,5 @@
 "Name: \PR:PYC_SUPPORT_DL_AUDIT_TRAIL\FO:DOWNLOAD_EXCEL\SE:BEGIN\EI
-ENHANCEMENT 0 ZHRAUPY_EI_PCC_DL_AUDIT_TRAIL.
+ENHANCEMENT 0 ZUSEHRAUPY_EI_PCC_DL_AUDIT_TRL.
 *-----------------------------------------------------------------------*
 * Description   : Wrapper program to execute standard SAP program       *
 *                 PYC_SUPPORT_DL_AUDIT_TRAIL in automated way, so that  *

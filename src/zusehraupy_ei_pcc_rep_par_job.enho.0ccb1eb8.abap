@@ -1,5 +1,5 @@
 "Name: \TY:CL_PYC_BPC_REPORT_PARALLEL\ME:GET_JOB_NAME\SE:END\EI
-ENHANCEMENT 0 ZHRAUPY_EI_PCC_REP_PAR_JOB.
+ENHANCEMENT 0 ZUSEHRAUPY_EI_PCC_REP_PAR_JOB.
 *---------------------------------------------------------------------------------------------*
 *Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *
 *---------------------------------------------------------------------------------------------*

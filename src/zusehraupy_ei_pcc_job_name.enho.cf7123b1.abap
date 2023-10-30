@@ -1,5 +1,5 @@
 "Name: \TY:CL_PYC_BPC_REPORT_SIMPLE\ME:GET_JOB_NAME\SE:BEGIN\EI
-ENHANCEMENT 0 ZHRAUPY_EI_PCC_JOB_NAME.
+ENHANCEMENT 0 ZUSEHRAUPY_EI_PCC_JOB_NAME.
 *---------------------------------------------------------------------------------------------*
 *Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *
 *---------------------------------------------------------------------------------------------*

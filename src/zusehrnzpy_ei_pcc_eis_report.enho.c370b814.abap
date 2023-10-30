@@ -1,5 +1,5 @@
 "Name: \PR:HNZLPDS0\FO:DISPLAY_OUTPUT\SE:END\EI
-ENHANCEMENT 0 ZHRNZPY_EI_PCC_EIS_REPORT.
+ENHANCEMENT 0 ZUSEHRNZPY_EI_PCC_EIS_REPORT.
 *-----------------------------------------------------------------------*
 * Description   : This Enhancement to standard SAP program is to        *
 *                 display both Exceptions report and Error log Report   *

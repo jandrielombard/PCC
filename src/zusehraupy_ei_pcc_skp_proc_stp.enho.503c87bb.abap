@@ -1,5 +1,5 @@
 "Name: \PR:PYC_SUPPORT_SKIP_PROCESS_STEP\FO:PREPARE_PROCESS_DATA\SE:END\EI
-ENHANCEMENT 0 ZHRAUPY_EI_PCC_SKIP_PROCE_STEP.
+ENHANCEMENT 0 ZUSEHRAUPY_EI_PCC_SKP_PROC_STP.
 *----------------------------------------------------------------------------------------------*
 * CHANGE HISTORY
 *----------------------------------------------------------------------------------------------*
