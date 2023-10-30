@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_M43_PA_TAX_MISSING</CLSNAME>
+    <CLSNAME>ZUSECL_M43_PA_TAX_ND</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Missing Tax Code</DESCRIPT>
+    <DESCRIPT>Tax Code ND - Follow up</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
@@ -22,7 +22,7 @@
     <item>
      <ID>I</ID>
      <KEY>002</KEY>
-     <ENTRY>Missing Tax Code</ENTRY>
+     <ENTRY>Tax Code ND - Follow up</ENTRY>
      <LENGTH>26</LENGTH>
     </item>
    </TPOOL>

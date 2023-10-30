@@ -1,39 +1,39 @@
-class zcl_m43_pa_bank_dupl definition
+class ZUSECL_M43_PA_BANK_DUPL definition
   public
-  inheriting from zcl_m99_pcc_chk_fp4_base
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
-  public section.
+public section.
+protected section.
 
-
-  protected section.
-
-    types: begin of ty_it0009,
+  types:
+    begin of ty_it0009,
              pernr  type p0009-pernr,
              begda  type p0009-begda,
              bankl  type p0009-bankl,
              bankn  type p0009-bankn,
              others type string,
-           end of ty_it0009.
-    types: tty_it0009 type table of ty_it0009.
+           end of ty_it0009 .
+  types:
+    tty_it0009 type table of ty_it0009 .
 
-    constants mc_itemid_dupl type pyd_s_rdsfo_ext-itemid value 'BANKDUPL' ##NO_TEXT.
-    data: mt_it0009 type tty_it0009.
-    data: ms_it0009 type ty_it0009.
+  constants MC_ITEMID_DUPL type PYD_S_RDSFO_EXT-ITEMID value 'BANKDUPL' ##NO_TEXT.
+  data MT_IT0009 type TTY_IT0009 .
+  data MS_IT0009 type TY_IT0009 .
 
-    methods check
-        redefinition .
-    methods err_ov_get_list
-        redefinition .
+  methods CHECK
+    redefinition .
+  methods ERR_OV_GET_LIST
+    redefinition .
   private section.
 ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_BANK_DUPL IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_BANK_DUPL IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Bank Details: Check for Duplicate Bank Account
     data: lt_all_it0009 type tty_it0009.
     data: lt_dup_it0009 type tty_it0009.
@@ -137,7 +137,7 @@ CLASS ZCL_M43_PA_BANK_DUPL IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data: ls_err_ov       type ty_s_err_ov,
           lv_value_string type string.

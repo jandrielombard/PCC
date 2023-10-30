@@ -3,32 +3,21 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_M43_PA_IRD_DUPL</CLSNAME>
+    <CLSNAME>ZUSECL_M43_PA_MARCH_STC_CHECK</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Duplicate IRD</DESCRIPT>
+    <DESCRIPT>Upcoming Special Tax Rate expiry (March)</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
+    <MSG_ID>ZHRPY_PCC_MSG</MSG_ID>
    </VSEOCLASS>
    <TPOOL>
     <item>
      <ID>I</ID>
      <KEY>001</KEY>
-     <ENTRY>Duplicate IRD Number</ENTRY>
-     <LENGTH>128</LENGTH>
-    </item>
-    <item>
-     <ID>I</ID>
-     <KEY>002</KEY>
      <ENTRY>Reason</ENTRY>
-     <LENGTH>16</LENGTH>
-    </item>
-    <item>
-     <ID>I</ID>
-     <KEY>003</KEY>
-     <ENTRY>Employees</ENTRY>
-     <LENGTH>122</LENGTH>
+     <LENGTH>27</LENGTH>
     </item>
    </TPOOL>
    <I18N_TPOOL>
@@ -41,15 +30,16 @@
        <ENTRY>Subtyp &amp; fehlt</ENTRY>
        <LENGTH>27</LENGTH>
       </item>
-      <item>
-       <ID>I</ID>
-       <KEY>002</KEY>
-       <ENTRY>Grund</ENTRY>
-       <LENGTH>16</LENGTH>
-      </item>
      </TEXTPOOL>
     </item>
    </I18N_TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_TAXCD_STC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Tax Code</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

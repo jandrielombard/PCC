@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_M43_PA_HRLY_RTE_MISMATCH</CLSNAME>
+    <CLSNAME>ZUSECL_M43_PA_MIN_WAGE_CHECK</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>Minimum wage rate check</DESCRIPT>
     <STATE>1</STATE>
@@ -22,7 +22,7 @@
     <item>
      <ID>I</ID>
      <KEY>002</KEY>
-     <ENTRY>Team Members base Hourly Rate differs to the CEA/IEA Pay Scale Rate</ENTRY>
+     <ENTRY>Team Members base Hourly Rate is less than the minimum statutory wage</ENTRY>
      <LENGTH>84</LENGTH>
     </item>
    </TPOOL>
@@ -55,11 +55,6 @@
      <CMPNAME>MC_KONST_ZMIN</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Payroll parameter for amounts</DESCRIPT>
-    </SEOCOMPOTX>
-    <SEOCOMPOTX>
-     <CMPNAME>MC_TRFST_IA</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Pay Scale Level</DESCRIPT>
     </SEOCOMPOTX>
    </DESCRIPTIONS>
   </asx:values>

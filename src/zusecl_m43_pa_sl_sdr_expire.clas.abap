@@ -1,39 +1,40 @@
-class zcl_m43_pa_sl_sdr_expire definition
+class ZUSECL_M43_PA_SL_SDR_EXPIRE definition
   public
-  inheriting from zcl_m99_pcc_chk_fp4_base
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
-  public section.
-  protected section.
+public section.
+protected section.
 
-    types:
-      begin of ty_it0313,
+  types:
+    begin of ty_it0313,
         pernr    type persno,
         stlpc    type pa0313-stlpc,
         sdate    type pa0313-sdate,
         errty(1) type c.
     types: end of ty_it0313 .
-    types: tty_it0313 type table of ty_it0313.
+  types:
+    tty_it0313 type table of ty_it0313 .
 
-    constants mc_itemid_sdrexpire type pyd_s_rdsfo_ext-itemid value 'SDREXPIRE' ##NO_TEXT.
-    constants mc_errty_nodate type c value 'A' ##NO_TEXT.
-    constants mc_errty_dateincp type c value 'B' ##NO_TEXT.
-    data mt_it0313 type tty_it0313.
-    data ms_it0313 type ty_it0313.
+  constants MC_ITEMID_SDREXPIRE type PYD_S_RDSFO_EXT-ITEMID value 'SDREXPIRE' ##NO_TEXT.
+  constants MC_ERRTY_NODATE type C value 'A' ##NO_TEXT.
+  constants MC_ERRTY_DATEINCP type C value 'B' ##NO_TEXT.
+  data MT_IT0313 type TTY_IT0313 .
+  data MS_IT0313 type TY_IT0313 .
 
-    methods check
-        redefinition .
-    methods err_ov_get_list
-        redefinition .
+  methods CHECK
+    redefinition .
+  methods ERR_OV_GET_LIST
+    redefinition .
   private section.
 ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_SL_SDR_EXPIRE IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_SL_SDR_EXPIRE IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Student Loan SDR expiry Date
     data: ls_result like line of rt_result.
     data: lt_all_it0313 type table of ty_it0313.
@@ -103,7 +104,7 @@ CLASS ZCL_M43_PA_SL_SDR_EXPIRE IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data: ls_err_ov       type ty_s_err_ov,
           lv_value_string type string.

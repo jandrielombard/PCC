@@ -3,39 +3,32 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_M43_PA_TERM_WB</CLSNAME>
+    <CLSNAME>ZUSECL_M43_PA_IRD_MISSING</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Termination in Current Period. Process Termination workbench</DESCRIPT>
+    <DESCRIPT>Missing IRD</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
-    <MSG_ID>ZHRPY_PCC_MSG</MSG_ID>
    </VSEOCLASS>
    <TPOOL>
     <item>
      <ID>I</ID>
      <KEY>001</KEY>
-     <ENTRY>Reason</ENTRY>
-     <LENGTH>50</LENGTH>
+     <ENTRY>IRD Number missing</ENTRY>
+     <LENGTH>128</LENGTH>
     </item>
     <item>
      <ID>I</ID>
      <KEY>002</KEY>
-     <ENTRY>Termination Date</ENTRY>
-     <LENGTH>50</LENGTH>
+     <ENTRY>Reason</ENTRY>
+     <LENGTH>16</LENGTH>
     </item>
     <item>
      <ID>I</ID>
      <KEY>003</KEY>
-     <ENTRY>Termination Reason</ENTRY>
-     <LENGTH>50</LENGTH>
-    </item>
-    <item>
-     <ID>I</ID>
-     <KEY>004</KEY>
-     <ENTRY>Process Termination Final Payments</ENTRY>
-     <LENGTH>68</LENGTH>
+     <ENTRY>Contact Employee to get the correct IRd number and update IT309 Accordingly.</ENTRY>
+     <LENGTH>122</LENGTH>
     </item>
    </TPOOL>
    <I18N_TPOOL>
@@ -59,9 +52,9 @@
    </I18N_TPOOL>
    <DESCRIPTIONS>
     <SEOCOMPOTX>
-     <CMPNAME>MC_MASSN_TERMINATION</CMPNAME>
+     <CMPNAME>MC_ITEMID_IRD</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Action Type</DESCRIPT>
+     <DESCRIPT>Payroll Data Source Result Object Details Item ID</DESCRIPT>
     </SEOCOMPOTX>
    </DESCRIPTIONS>
   </asx:values>

@@ -1,6 +1,6 @@
-class ZCL_M43_PA_TAX_ND definition
+class ZUSECL_M43_PA_TAX_ND definition
   public
-  inheriting from ZCL_M99_PCC_CHK_FP4_BASE
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
 public section.
@@ -23,10 +23,10 @@ ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_TAX_ND IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_TAX_ND IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Missing Tax Code
     data: lt_pernr type table of ty_pernr.
     data: ls_result like line of rt_result.
@@ -90,7 +90,7 @@ CLASS ZCL_M43_PA_TAX_ND IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data:
       ls_err_ov       type ty_s_err_ov,

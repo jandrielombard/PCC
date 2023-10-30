@@ -1,9 +1,9 @@
-class zcl_m43_pa_hrly_rte_mismatch definition
+class ZUSECL_M43_PA_HRLY_RTE_MISMCH definition
   public
-  inheriting from zcl_m99_pcc_chk_fp4_base
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
-  public section.
+public section.
 protected section.
 
   constants MC_ITEMID_RTECHK type PYD_S_RDSFO_EXT-ITEMID value 'RTECHECK' ##NO_TEXT.
@@ -20,18 +20,18 @@ ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_HRLY_RTE_MISMATCH IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_HRLY_RTE_MISMCH IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Hourly rate mismatch
     data: lt_pernr type table of ty_pernr.
     data: lt_it0008 type table of p0008,
           ls_it0008 type p0008,
           ls_result like line of rt_result.
     data: lv_chg_aedtm type aedtm.
-    data: lt_it0008_lgart type zcl_m99_pcc_chk_utilities=>tty_it0008_lgart.
-    data: ls_it0008_lgart type zcl_m99_pcc_chk_utilities=>ty_it0008_lgart.
+    data: lt_it0008_lgart type zusecl_m99_pcc_chk_utilities=>tty_it0008_lgart.
+    data: ls_it0008_lgart type zusecl_m99_pcc_chk_utilities=>ty_it0008_lgart.
     data: lv_wage_amt    type pad_amt7s,
           lv_zmin_amount type t511p-betrg.
 
@@ -99,7 +99,7 @@ CLASS ZCL_M43_PA_HRLY_RTE_MISMATCH IMPLEMENTATION.
                  trfst = ls_it0008-trfst binary search.
 
       " Read IT0008 Wage Types
-      call method zcl_m99_pcc_chk_utilities=>read_it0008_wagetype_dtls
+      call method zusecl_m99_pcc_chk_utilities=>read_it0008_wagetype_dtls
         exporting
           is_p0008        = ls_it0008
         importing
@@ -132,7 +132,7 @@ CLASS ZCL_M43_PA_HRLY_RTE_MISMATCH IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data:
       ls_err_ov       type ty_s_err_ov,

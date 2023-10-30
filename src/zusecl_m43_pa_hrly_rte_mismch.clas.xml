@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_M43_PA_TAX_ND</CLSNAME>
+    <CLSNAME>ZUSECL_M43_PA_HRLY_RTE_MISMCH</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Tax Code ND - Follow up</DESCRIPT>
+    <DESCRIPT>Minimum wage rate check</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
@@ -22,8 +22,8 @@
     <item>
      <ID>I</ID>
      <KEY>002</KEY>
-     <ENTRY>Tax Code ND - Follow up</ENTRY>
-     <LENGTH>26</LENGTH>
+     <ENTRY>Team Members base Hourly Rate differs to the CEA/IEA Pay Scale Rate</ENTRY>
+     <LENGTH>84</LENGTH>
     </item>
    </TPOOL>
    <I18N_TPOOL>
@@ -45,6 +45,23 @@
      </TEXTPOOL>
     </item>
    </I18N_TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_HOURLY_RATE_WT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Wage Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_KONST_ZMIN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll parameter for amounts</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_TRFST_IA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Pay Scale Level</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

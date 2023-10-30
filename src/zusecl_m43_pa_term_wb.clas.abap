@@ -1,13 +1,13 @@
-class zcl_m43_pa_term_wb definition
+class ZUSECL_M43_PA_TERM_WB definition
   public
-  inheriting from zcl_m99_pcc_chk_fp4_base
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
-  public section.
-  protected section.
+public section.
+protected section.
 
-    types:
-      begin of ty_it0000,
+  types:
+    begin of ty_it0000,
         pernr type p0000-pernr,
         begda type p0000-begda,
         massn type p0000-massn,
@@ -15,44 +15,43 @@ class zcl_m43_pa_term_wb definition
         mgtxt type t530t-mgtxt,
         aedtm type p0000-aedtm.
     types: end of ty_it0000 .
-    types: tty_it0000 type table of ty_it0000.
-
-    types:
-      begin of ty_it0000_dtls,
+  types:
+    tty_it0000 type table of ty_it0000 .
+  types:
+    begin of ty_it0000_dtls,
         begda type p0000-begda,
         massn type p0000-massn,
         massg type p0000-massg,
         aedtm type p0000-aedtm.
     types: end of ty_it0000_dtls .
-
-    types:
-      begin of ty_it0416,
+  types:
+    begin of ty_it0416,
         pernr type persno,
         subty type p0416-subty,
         begda type p0416-begda,
         aedtm type p0416-aedtm.
     types: end of ty_it0416 .
 
-    constants mc_itemid_exetermwb type pyd_s_rdsfo_ext-itemid value 'EXETERMWB' ##NO_TEXT.
-    constants mc_massn_termination type p0000-massn value 'ZT' ##NO_TEXT.
-    constants mc_it0416_twb_subty type p0416-subty value '4301' ##NO_TEXT.
-    data: mt_it0000 type tty_it0000.
-    data: ms_it0000 type ty_it0000.
-    data: ms_it0000_dtls type ty_it0000_dtls.
+  constants MC_ITEMID_EXETERMWB type PYD_S_RDSFO_EXT-ITEMID value 'EXETERMWB' ##NO_TEXT.
+  constants MC_MASSN_TERMINATION type P0000-MASSN value 'ZT' ##NO_TEXT.
+  constants MC_IT0416_TWB_SUBTY type P0416-SUBTY value '4301' ##NO_TEXT.
+  data MT_IT0000 type TTY_IT0000 .
+  data MS_IT0000 type TY_IT0000 .
+  data MS_IT0000_DTLS type TY_IT0000_DTLS .
 
-    methods check
-        redefinition .
-    methods err_ov_get_list
-        redefinition .
+  methods CHECK
+    redefinition .
+  methods ERR_OV_GET_LIST
+    redefinition .
   private section.
 ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_TERM_WB IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_TERM_WB IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Termination in Current Period. Process Termination workbench.
     data: ls_result like line of rt_result.
     data: lt_all_it0000 type table of ty_it0000.
@@ -138,7 +137,7 @@ CLASS ZCL_M43_PA_TERM_WB IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Method for Overview list display
     data: ls_err_ov type ty_s_err_ov,
           ls_sfo    type cl_pyd_rd_dto_sfo=>ty_s_rd,

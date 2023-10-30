@@ -1,43 +1,44 @@
-class zcl_m43_pa_al_ann_move definition
+class ZUSECL_M43_PA_AL_ANN_MOVE definition
   public
-  inheriting from zcl_m99_pcc_chk_fp4_base
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
-  public section.
-  protected section.
+public section.
+protected section.
 
-    types:
-      begin of ty_anzhl_data,
+  types:
+    begin of ty_anzhl_data,
         dct_pernr type p_pernr,
         lgart     type lgart,
         anzhl     type pranz,
       end of ty_anzhl_data .
-    types:
-      tty_anzhl_data type table of ty_anzhl_data .
-
-    types: ty_it0041 type p0041.
-    types: tty_it0041 type table of p0041.
-
-    types: begin of ty_it0041_chg,
+  types:
+    tty_anzhl_data type table of ty_anzhl_data .
+  types TY_IT0041 type P0041 .
+  types:
+    tty_it0041 type table of p0041 .
+  types:
+    begin of ty_it0041_chg,
              pernr   type p0041-pernr,
              changed type boolean,
-           end of ty_it0041_chg.
-    types: tty_it0041_chg type table of ty_it0041_chg.
+           end of ty_it0041_chg .
+  types:
+    tty_it0041_chg type table of ty_it0041_chg .
 
-    constants mc_itemid_anndtmove type pyd_s_rdsfo_ext-itemid value 'ANNDTMOVE' ##NO_TEXT.
-    constants mc_z99_lgart type pyd_par_type value 'Z99_LGART' ##NO_TEXT.
-    data mv_prev_payroll_period type iperi .
-    data mv_prev_period_endda type endda.
-    data mt_z99_lgart type /iwbep/t_cod_select_options .
-    data ms_z99_lgart type /iwbep/s_cod_select_option .
-    constants mc_datetype_z3 type p0041-dar01 value 'Z3' ##NO_TEXT.
+  constants MC_ITEMID_ANNDTMOVE type PYD_S_RDSFO_EXT-ITEMID value 'ANNDTMOVE' ##NO_TEXT.
+  constants MC_Z99_LGART type PYD_PAR_TYPE value 'Z99_LGART' ##NO_TEXT.
+  data MV_PREV_PAYROLL_PERIOD type IPERI .
+  data MV_PREV_PERIOD_ENDDA type ENDDA .
+  data MT_Z99_LGART type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MS_Z99_LGART type /IWBEP/S_COD_SELECT_OPTION .
+  constants MC_DATETYPE_Z3 type P0041-DAR01 value 'Z3' ##NO_TEXT.
 
-    methods check
-        redefinition .
-    methods err_ov_get_list
-        redefinition .
-    methods get_specifc_custmizing
-        redefinition .
+  methods CHECK
+    redefinition .
+  methods ERR_OV_GET_LIST
+    redefinition .
+  methods GET_SPECIFC_CUSTMIZING
+    redefinition .
 private section.
 
   methods GET_IT0041_CHANGED_DATA
@@ -49,10 +50,10 @@ ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_AL_ANN_MOVE IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_AL_ANN_MOVE IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Monitoring moving of the Annual Leave date in EC from ECP wage type
     data: lt_pernr type table of ty_pernr.
     data: ls_result like line of rt_result.
@@ -123,7 +124,7 @@ CLASS ZCL_M43_PA_AL_ANN_MOVE IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data:
       ls_err_ov       type ty_s_err_ov,
@@ -156,7 +157,7 @@ CLASS ZCL_M43_PA_AL_ANN_MOVE IMPLEMENTATION.
   endmethod.
 
 
-  method get_it0041_changed_data.
+  method GET_IT0041_CHANGED_DATA.
 * check if P0041 is created with a new record from start of current pay period
     data: lt_cp_it0041 type tty_it0041,
           lt_pp_it0041 type tty_it0041.
@@ -233,7 +234,7 @@ CLASS ZCL_M43_PA_AL_ANN_MOVE IMPLEMENTATION.
   endmethod.
 
 
-  method get_specifc_custmizing.
+  method GET_SPECIFC_CUSTMIZING.
 * read check specific parameters
     data lt_param_so  type /iwbep/t_cod_select_options.
     data ls_par       type if_pyd_fnd_types=>ty_s_resp.

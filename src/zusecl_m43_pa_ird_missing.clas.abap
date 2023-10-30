@@ -1,26 +1,26 @@
-class ZCL_M43_PA_IRD_MISSING definition
+class ZUSECL_M43_PA_IRD_MISSING definition
   public
-  inheriting from ZCL_M99_PCC_CHK_FP4_BASE
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
 public section.
 
   constants MC_ITEMID_IRD type PYD_S_RDSFO_EXT-ITEMID value 'IRDMISSING' ##NO_TEXT.
-  PROTECTED SECTION.
+protected section.
 
-    METHODS check
-        REDEFINITION .
-    METHODS err_ov_get_list
-        REDEFINITION .
+  methods CHECK
+    redefinition .
+  methods ERR_OV_GET_LIST
+    redefinition .
   PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_IRD_MISSING IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_IRD_MISSING IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * To identify team members who have a missing IRD number, P0309-IRDNR
 * Team members with tax code P0313-TAXCD 'ND' are excluded
     data: lt_pernr type table of ty_pernr.
@@ -114,7 +114,7 @@ CLASS ZCL_M43_PA_IRD_MISSING IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data: ls_err_ov       type ty_s_err_ov,
           lv_value_string type string.

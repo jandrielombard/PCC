@@ -1,35 +1,37 @@
-class zcl_m43_pa_ird_dupl definition
+class ZUSECL_M43_PA_IRD_DUPL definition
   public
-  inheriting from zcl_m99_pcc_chk_fp4_base
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
-  public section.
+public section.
+protected section.
 
-
-  protected section.
-    types: begin of ty_it0309,
+  types:
+    begin of ty_it0309,
              pernr  type p0309-pernr,
              irdnr  type p0309-irdnr,
              others type string,
-           end of ty_it0309.
-    types: tty_it0309 type table of ty_it0309.
+           end of ty_it0309 .
+  types:
+    tty_it0309 type table of ty_it0309 .
 
-    constants mc_itemid_duplird type pyd_s_rdsfo_ext-itemid value 'DUPLIRD' ##NO_TEXT.
-    data: mt_it0309 type tty_it0309.
-    data: ms_it0309 type ty_it0309.
-    methods check
-        redefinition .
-    methods err_ov_get_list
-        redefinition .
+  constants MC_ITEMID_DUPLIRD type PYD_S_RDSFO_EXT-ITEMID value 'DUPLIRD' ##NO_TEXT.
+  data MT_IT0309 type TTY_IT0309 .
+  data MS_IT0309 type TY_IT0309 .
+
+  methods CHECK
+    redefinition .
+  methods ERR_OV_GET_LIST
+    redefinition .
   private section.
 ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_IRD_DUPL IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_IRD_DUPL IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * Duplicate IRD
     data: lt_all_it0309 type tty_it0309.
     data: lt_dup_it0309 type tty_it0309.
@@ -117,7 +119,7 @@ CLASS ZCL_M43_PA_IRD_DUPL IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data: ls_err_ov       type ty_s_err_ov,
           lv_value_string type string.

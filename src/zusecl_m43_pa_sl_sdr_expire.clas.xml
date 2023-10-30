@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_M43_PA_AL_ANN_MOVE</CLSNAME>
+    <CLSNAME>ZUSECL_M43_PA_SL_SDR_EXPIRE</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Monitoring moving of the Annual Leave date in EC from ECP WT</DESCRIPT>
+    <DESCRIPT>Student Loan SDR expiry Date</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
@@ -22,8 +22,14 @@
     <item>
      <ID>I</ID>
      <KEY>002</KEY>
-     <ENTRY>Annual Leave anniversary date has not been moved with the number of Unpaid Leave Taken Days</ENTRY>
-     <LENGTH>132</LENGTH>
+     <ENTRY>Student Loan Special Rate End Date missing</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Student Loan Special Rate Ending in Current Period</ENTRY>
+     <LENGTH>102</LENGTH>
     </item>
    </TPOOL>
    <I18N_TPOOL>
@@ -45,13 +51,6 @@
      </TEXTPOOL>
     </item>
    </I18N_TPOOL>
-   <DESCRIPTIONS>
-    <SEOCOMPOTX>
-     <CMPNAME>GET_IT0041_CHANGED_DATA</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>IT 0041 Changed Employees</DESCRIPT>
-    </SEOCOMPOTX>
-   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

@@ -1,6 +1,6 @@
-class ZCL_M43_PA_MARCH_STC_CHECK definition
+class ZUSECL_M43_PA_MARCH_STC_CHECK definition
   public
-  inheriting from ZCL_M99_PCC_CHK_FP4_BASE
+  inheriting from ZUSECL_M99_PCC_CHK_FP4_BASE
   create public .
 
 public section.
@@ -18,10 +18,10 @@ ENDCLASS.
 
 
 
-CLASS ZCL_M43_PA_MARCH_STC_CHECK IMPLEMENTATION.
+CLASS ZUSECL_M43_PA_MARCH_STC_CHECK IMPLEMENTATION.
 
 
-  method check.
+  method CHECK.
 * check Upcoming Special Tax Rate expiry (March) on IT0313
     data: lt_it     type sorted table of pernr_d with unique key table_line,
           ls_result like line of rt_result.
@@ -81,7 +81,7 @@ CLASS ZCL_M43_PA_MARCH_STC_CHECK IMPLEMENTATION.
   endmethod.
 
 
-  method err_ov_get_list.
+  method ERR_OV_GET_LIST.
 * Display error message
     data:
       ls_err_ov       type ty_s_err_ov,
