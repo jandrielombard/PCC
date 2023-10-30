@@ -14,7 +14,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_PY_MSG_LOCK.
   describe table it_msgtab lines lv_ei_line.
   read table it_msgtab into ls_ei_msgtab index lv_ei_line.
 * Lock Employee Records
-  call method zcl_m99_pcc_utilities=>enqueue_py_msg
+  call method zusecl_m99_pcc_utilities=>enqueue_py_msg
     exporting
       iv_pernr    = ls_ei_msgtab-pernr
       iv_run_type = iv_run_type.

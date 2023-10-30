@@ -8,7 +8,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_MDLOG_EHIUPD.
 *---------------------------------------------------------------------------------------------*
 * UpDate event handler table for all changes happened during the Payroll Processing
   try.
-    call method zcl_m99_pcc_mdlog_ehiupdate=>submit_mdlog_ehiupdate
+    call method zusecl_m99_pcc_mdlog_ehiupdate=>submit_mdlog_ehiupdate
       exporting
         iv_pypi_id = iv_pypi_id.
    catch cx_pyc_cont .

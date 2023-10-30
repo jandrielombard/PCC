@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>PCC RFC Functions for Parallel Process</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZUSEFG_PCC_PARALLEL_PROCTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZUSEFG_PCC_PARALLEL_PROC</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZUSE_PCC_PARALLEL_TASK</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>PCC RFC Function for Parallel Process</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IO_CHECK_OBJNM</PARAMETER>
+       <TYP>SEOCLSNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_PERNR</PARAMETER>
+       <TYP>HR99S_PERNR_RANGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DELAY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>STRING</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_SERIALIZED_OBJECT</PARAMETER>
+       <TYP>ZHRPY_DE_PCC_OBJDATA</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_SERIALIZED_OBJECT</PARAMETER>
+       <TYP>ZHRPY_DE_PCC_OBJDATA</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_ERROR_MSG</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IO_CHECK_OBJNM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object Type Name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_PERNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table for PERNR ranges</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DELAY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Delay Seconds</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_SERIALIZED_OBJECT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Serialized Object</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_SERIALIZED_OBJECT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Serialized Object</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_ERROR_MSG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Error message</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

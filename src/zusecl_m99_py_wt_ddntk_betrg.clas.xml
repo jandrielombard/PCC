@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZUSECL_M99_PY_WT_DDNTK_BETRG</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>PCC - Novated Lease Deductions not taken</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>YTD amount may cause error in STP</ENTRY>
+     <LENGTH>74</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Reason</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>ABN</ENTRY>
+     <LENGTH>66</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Wage Type</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Amount $</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>STP Override Amount</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BETRG_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Compare &lt; BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BETRG_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Compare &gt; BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_LGART_IND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>WT to be summed on BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_LGART_R</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>WT to be summed on ANZHL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_LGART_BETRG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARE_BETRG_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number High</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARE_BETRG_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number Low</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_LGART_IND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Individual WTs sum: Y/N</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_CHECK_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read Payroll Result for Selected Employees</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_CHECK_DATA</CMPNAME>
+     <SCONAME>IT_PERNR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table for PERNR ranges</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -3,9 +3,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_REP_PAR_JOB.
 *---------------------------------------------------------------------------------------------*
 *Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *
 *---------------------------------------------------------------------------------------------*
-*001 |18-10-2021 |1130848|change background job name for    |PTX-3763      |CFAK900994        *
-*                         Process Step Jobs.                                                  *
-*---------------------------------------------------------------------------------------------*
+
 * Add Process template name for all Process Step Job Names
 * In case of Parallel Processing replace first 2 Char with Process template name
   if rv_result+0(5) CO lc_numbers and rv_result+5(1) CO lc_parallel_id_separator.

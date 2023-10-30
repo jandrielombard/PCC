@@ -58,7 +58,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_DL_AUDIT_TRAIL.
 
     if c_pi_al eq 'X'.
       sort lt_pi_alh by tsl_char descending.
-      lt_pi_alh_export = zcl_m99_pcc_dl_audit_trail=>convert_alert_log_tsl( lt_pi_alh ).
+      lt_pi_alh_export = zusecl_m99_pcc_dl_audit_trail=>convert_alert_log_tsl( lt_pi_alh ).
       perform feed_sheets tables lt_pi_alh_export using c_sheet1 lc_struc_name1 .
     endif.
 
@@ -69,9 +69,9 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_DL_AUDIT_TRAIL.
       append ls_filter to lt_filter.
       refresh: lt_pi_al.
       lt_pi_al = lo_pyc_rt_facade->v3_pi_action_log_gl( iv_convert_msg_vars = abap_false it_filter = lt_filter ).
-      lt_pi_ph = zcl_m99_pcc_dl_audit_trail=>enrich_process_log( lt_pi_al ).
+      lt_pi_ph = zusecl_m99_pcc_dl_audit_trail=>enrich_process_log( lt_pi_al ).
       sort lt_pi_ph by tsl descending.
-      lt_pi_ph_export = zcl_m99_pcc_dl_audit_trail=>convert_process_log_tsl( lt_pi_ph ).
+      lt_pi_ph_export = zusecl_m99_pcc_dl_audit_trail=>convert_process_log_tsl( lt_pi_ph ).
       perform feed_sheets tables lt_pi_ph_export using c_sheet2 lc_struc_name2 .
     endif.
 
@@ -81,7 +81,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_DL_AUDIT_TRAIL.
         perform feed_sheets tables lt_pi_tskkpi_al using c_sheet3 c_struc_name4 .
       else.
         sort lt_pi_kpi_al by tsl descending.
-        lt_pi_kpi_al_export = zcl_m99_pcc_dl_audit_trail=>convert_analytics_log_tsl( lt_pi_kpi_al ).
+        lt_pi_kpi_al_export = zusecl_m99_pcc_dl_audit_trail=>convert_analytics_log_tsl( lt_pi_kpi_al ).
         perform feed_sheets tables lt_pi_kpi_al_export using c_sheet3 lc_struc_name3 .
       endif.
     endif.
@@ -90,7 +90,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_DL_AUDIT_TRAIL.
 
 * Read Process instance Attachments
     refresh: lt_attachment.
-    call method zcl_m99_pcc_dl_audit_trail=>get_proc_inst_atachements
+    call method zusecl_m99_pcc_dl_audit_trail=>get_proc_inst_atachements
       exporting
         iv_pi          = lv_pi
         it_process_log = lt_pi_al
@@ -131,7 +131,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_DL_AUDIT_TRAIL.
     delete dataset lv_wow_dset.
 
     lv_subrc = 4.
-    call method zcl_m99_pcc_utilities=>save_binstring_to_asfile
+    call method zusecl_m99_pcc_utilities=>save_binstring_to_asfile
       exporting
         iv_filename  = lv_full_file_name
         iv_binstring = lv_wow_xstring

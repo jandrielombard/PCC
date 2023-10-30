@@ -7,7 +7,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_EHEMPL_CONTROL.
 *001 |21-11-2022 |1130848|Event Handler List Control        |PTX-3763      |CFAK902560        *
 *    |           |       |Initial Implementation            |              |                  *
 *---------------------------------------------------------------------------------------------*
-call method zcl_m99_pcc_utilities=>adjust_event_handler_item_list
+call method zusecl_m99_pcc_utilities=>adjust_event_handler_item_list
   changing
     ct_ehi = rt_ehi.
 *<<< End of PTX-3763 - PCC Implementation - Event Handler Employee List Control

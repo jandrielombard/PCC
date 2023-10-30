@@ -1,18 +1,12 @@
 "Name: \TY:CL_PYC_BPC_REPORT_PARALLEL\ME:GET_JOB_NAME\SE:BEGIN\EI
 ENHANCEMENT 0 ZHRAUPY_EI_PCC_REP_PAR_JOB.
 *---------------------------------------------------------------------------------------------*
-*Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *
-*---------------------------------------------------------------------------------------------*
-*001 |17-08-2021 |1130843|change background job name for    |PTX-2616      |CFAK900511        *
-*                         check job.                                                          *
-*---------------------------------------------------------------------------------------------*
-*002 |01-12-2021 |1130848|change background job name using  |PTX-3763      |CFAK9011268       *
-*                         mapping table.                                                          *
+*Mod | Date      |User ID|Description                       |Change Label  |Workbench Request *                                                       *
 *---------------------------------------------------------------------------------------------*
   CONSTANTS: lc_parallel_id_separator TYPE c VALUE '/',
              lc_numbers(10) type c value '0123456789'.
 
-  DATA: lr_job_name            type dmc_t_jobname_range,
+  DATA: lr_job_name            type ZBTCJOB_RANGE_TABLE,
         lv_id                  TYPE string,
         lv_result_temp         LIKE rv_result,
         lv_max_length          TYPE i.
@@ -26,7 +20,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_REP_PAR_JOB.
                                 ) .
 * Read Job Name Mapping
   if not ( lv_rpt_name is initial and mv_job_base_name is initial ).
-    select single job_name into lv_job_name from zhrpy_pcc_jobnm
+    select single job_name into lv_job_name from zuse_pcc_jobnm
       where rpt_name = lv_rpt_name and job_base_name = mv_job_base_name.
       if sy-subrc eq 0.
         if not lv_job_name is INITIAL.

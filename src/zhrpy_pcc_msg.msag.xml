@@ -149,7 +149,7 @@
      <SPRSL>E</SPRSL>
      <ARBGB>ZHRPY_PCC_MSG</ARBGB>
      <MSGNR>024</MSGNR>
-     <TEXT>Region not found</TEXT>
+     <TEXT>Payee State/Territory must be provided</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
@@ -305,11 +305,13 @@
      <SPRSL>E</SPRSL>
      <ARBGB>ZHRPY_PCC_MSG</ARBGB>
      <MSGNR>052</MSGNR>
+     <TEXT>Payee Address Line 1 must be provided</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>ZHRPY_PCC_MSG</ARBGB>
      <MSGNR>053</MSGNR>
+     <TEXT>No permanent address found</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>

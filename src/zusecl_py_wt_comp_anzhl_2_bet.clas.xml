@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZUSECL_PY_WT_COMP_ANZHL_2_BET</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>PCC Compare two sets of WTs from RT for ANZHL and BETRG</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Verify that the payment wage types detailed below are correct based on the absences in the period</ENTRY>
+     <LENGTH>100</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Action</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ANZHL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Comparison mode: ANZHL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ANZHL_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Amount to compare &lt; ANZHL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ANZHL_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Amount to compare &gt; ANZHL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BETRG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Comparison mode: BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BETRG_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Compare &lt; BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BETRG_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Compare &gt; BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Amount</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_IT2001</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Infotype</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_ITEMID_COMP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Result Object Details Item ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_LGART_ANZHL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>WT to be summed on ANZHL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_LGART_BETRG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>WT to be summed on BETRG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_LGART_ANZHL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_LGART_BETRG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARE_ANZHL_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number High 01</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARE_ANZHL_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number Low 01</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARE_BETRG_HIGH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number Low 02</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARE_BETRG_LOW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Number High 02</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_COMPARISON_OPARATOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check operator: EQ, NE, LT, GT, LE, GE -&gt; dynamic</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_CHECK_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read Payroll Result for Selected Employees</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_TIME_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read Employee Absence Data for the Period</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_CHECK_DATA</CMPNAME>
+     <SCONAME>IT_PERNR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table for PERNR ranges</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_TIME_DATA</CMPNAME>
+     <SCONAME>ET_TIME_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Absence Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_TIME_DATA</CMPNAME>
+     <SCONAME>IV_BEGDA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Start Date</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_TIME_DATA</CMPNAME>
+     <SCONAME>IV_ENDDA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>End Date</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_TIME_DATA</CMPNAME>
+     <SCONAME>IV_PERNR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Personnel Number</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

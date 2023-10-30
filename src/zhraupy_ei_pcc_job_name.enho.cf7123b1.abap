@@ -15,7 +15,7 @@ ENHANCEMENT 0 ZHRAUPY_EI_PCC_JOB_NAME.
                                 ) .
 * Read Job Name Mapping
   if not ( lv_rpt_name is initial and mv_job_base_name is initial ).
-    select single job_name into lv_job_name from zhrpy_pcc_jobnm
+    select single job_name into lv_job_name from zuse_pcc_jobnm
       where rpt_name = lv_rpt_name and job_base_name = mv_job_base_name.
       if sy-subrc eq 0.
         if not lv_job_name is INITIAL.

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZUSECL_M99_PY_PAYROLL_LOG</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Payroll log error message</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Employee has messages in the payroll log</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Reason</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_MSG_DETAIL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get messages from PYC_D_PY_MSG table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get messages from  P2RQ_MESSAGES table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_FILTER_P2RQ_MSG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_SEPARATOR_SLASH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Single-Character Indicator</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MERGE_PYMSG_AND_P2RQ_MSG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Merge Payroll and P2RQ messages</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_FILTER_P2RQ_MCLAS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_FILTER_P2RQ_MSG</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_FILTER_P2RQ_MSGNO</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_CHECK_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read data from Payroll Cluster table</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <SCONAME>IO_RES_CONTEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>PYDS: Result Context</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <SCONAME>IS_INST</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Instance</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <SCONAME>IS_TY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <SCONAME>IT_PAR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Result Parameter List</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <SCONAME>IT_PAR_ADDL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Result object key list</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_P2RQ_MESSAGES</CMPNAME>
+     <SCONAME>IT_PERNR_SO</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>MGW Framework: Select Options for Queries</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_CHECK_DATA</CMPNAME>
+     <SCONAME>IT_PERNR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table for PERNR ranges</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
