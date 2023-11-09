@@ -3078,6 +3078,13 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
     translate ls_t569u-aedat using comp_nine.
     translate ls_t569u-uzeit using comp_nine.
 
+    "no previous period found. This must be the very first period
+    if LS_T569U-AEDAT = '99999999'.
+      LS_T569U-AEDAT = LV_BEGDA - 14.
+      ls_t569u-uzeit = '010000'.
+    endif.
+
+
 
     "Find PCL4 records between last pay period exit date and today - need to filter on time stamp later
 * 1. Fill range tables
