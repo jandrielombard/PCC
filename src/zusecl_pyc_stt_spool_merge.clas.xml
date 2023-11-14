@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_PYC_STT_SPOOL_MERGE</CLSNAME>
+    <CLSNAME>ZUSECL_PYC_STT_SPOOL_MERGE</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>PCC Spool Merge Process Step</DESCRIPT>
     <STATE>1</STATE>

@@ -1,4 +1,4 @@
-class ZCL_PYC_STT_SPOOL_MERGE definition
+class ZUSECL_PYC_STT_SPOOL_MERGE definition
   public
   inheriting from CL_PYC_STT_ASYNC_BATCH_BASE
   final
@@ -16,10 +16,10 @@ ENDCLASS.
 
 
 
-CLASS ZCL_PYC_STT_SPOOL_MERGE IMPLEMENTATION.
+CLASS ZUSECL_PYC_STT_SPOOL_MERGE IMPLEMENTATION.
 
 
-  method fp3_bpc_det_rt_get_list.
+  method FP3_BPC_DET_RT_GET_LIST.
 * Assign Report, Selection and Log Classes
     " one report via one job
     data ls_dto type cl_pyc_rd_dto_bpc=>ty_s_rd.

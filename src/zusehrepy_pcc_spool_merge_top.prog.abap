@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *&  Include ZHRAUREPY_PCC_SPOOL_MERGE_TOP
 *&---------------------------------------------------------------------*
-tables: tsp01, tbtc_spoolid, tbtco, zhr_rpcs0000_a.
+tables: tsp01, tbtc_spoolid, tbtco, zuse_rpcs0000_a.
 
 types: begin of ty_spool,
          spoolid   type tbtc_spoolid-spoolid,
@@ -15,9 +15,9 @@ types: begin of ty_spool,
        end of ty_spool.
 
 types: begin of ty_title,
-         rqtitle      type zhr_rpcs0000_a-rqtitle,
-         job_variance type zhr_rpcs0000_a-job_variance,
-         spool_format type zhr_rpcs0000_a-spool_format,
+         rqtitle      type zuse_rpcs0000_a-rqtitle,
+         job_variance type zuse_rpcs0000_a-job_variance,
+         spool_format type zuse_rpcs0000_a-spool_format,
        end of ty_title.
 
 types: begin of ty_tbtco,

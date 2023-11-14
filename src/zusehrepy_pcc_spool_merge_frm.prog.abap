@@ -214,7 +214,7 @@ endform.
 *&---------------------------------------------------------------------*
 form initilation .
 * read the report titles from configuration
-  select rqtitle job_variance spool_format from  zhr_rpcs0000_a into table gt_titles
+  select rqtitle job_variance spool_format from  zuse_rpcs0000_a into table gt_titles
          where  programm   = p_call
          and    call_prog  = gc_orig_spool_merg_prog.
   if sy-subrc ne 0.
@@ -356,7 +356,7 @@ form read_spool_with_formatting  using  p_spool type ty_spool
   move l_spoolid to gs_spool_objects-spoolid..
   if p_last eq abap_true.
     lv_first_page =  p_spool-rqapprule - p_pages.
-    call function 'ZHRPY_RETURN_ABAP_SPOOLJOB'
+    call function 'ZUSE_RETURN_ABAP_SPOOLJOB'
       exporting
         rqident              = l_spoolid
         first_line           = lv_first_page
@@ -374,7 +374,7 @@ form read_spool_with_formatting  using  p_spool type ty_spool
         read_error           = 7
         others               = 8.
   else.
-    call function 'ZHRPY_RETURN_ABAP_SPOOLJOB'
+    call function 'ZUSE_RETURN_ABAP_SPOOLJOB'
       exporting
         rqident              = l_spoolid
         first_line           = lv_first_page

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZHRAU_RPT</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Please enter upload filename</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Please select 5 weeks older date</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>No spool reports selected to merge</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Merge not processed as other jobs still active</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Merge reports complete</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Main program not confirmed in ZUSE_RPCS0000_A</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>No job / spool reports selected to merge</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Please enter the date</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Please enter a date for the &quot;TO&quot; Month</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Test Run: No updates on the database</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Please neter a valid cost centre</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Please neter a valid End of the Week date</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>No spool file found. Please try again</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,10 +1,6 @@
 *&---------------------------------------------------------------------*
-*& Report           : ZHRAUREPY_PCC_SPOOL_MERGE                        *
+*& Report           : ZUSEHRAUREPY_PCC_SPOOL_MERGE                     *
 *& Tiltle           : Payroll Control Center jobs Spool Merge          *
-*& Transactio Code  : ZHRPY_M99_SPOOLMERGE                             *
-*& Create Date      : 17 Aug 2021                                      *
-*& Release          : ECC 6.0                                          *
-*& Author           : Satya Aluru                                      *
 *&                                                                     *
 *&  This custom program has been created to merge output of Parallel   *
 *&  Processing PCC Step into single job into single spool output.      *
@@ -21,8 +17,10 @@
 report  zhraurepy_pcc_spool_merge
    line-size 1023 no standard page heading.
 
-include zhraurepy_pcc_spool_merge_top.
-include zhraurepy_pcc_spool_merge_frm.
+INCLUDE ZUSEHREPY_PCC_SPOOL_MERGE_TOP.
+*include zhraurepy_pcc_spool_merge_top.
+INCLUDE ZUSEHREPY_PCC_SPOOL_MERGE_FRM.
+*include zhraurepy_pcc_spool_merge_frm.
 
 ************************************************************************
 start-of-selection.
