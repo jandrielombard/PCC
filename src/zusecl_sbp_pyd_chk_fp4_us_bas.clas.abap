@@ -204,10 +204,10 @@ class zusecl_sbp_pyd_chk_fp4_us_bas definition
         value(rv_result) type boole_d .
     methods parse_exclude_entry
       importing
-        !iv_entry type zhr_pcc_params-value .
+        !iv_entry type zuse_pcc_params-value .
     methods parse_include_entry
       importing
-        !iv_entry type zhr_pcc_params-value .
+        !iv_entry type zuse_pcc_params-value .
     methods sap_pdf_get
       importing
         !is_rd          type if_pyd_fnd_types=>ty_s_rd
@@ -390,8 +390,8 @@ CLASS ZUSECL_SBP_PYD_CHK_FP4_US_BAS IMPLEMENTATION.
 
 
   method get_custom_filter_scope.
-* Read the values from the ZHR_PCC_PARAMS table
-    select function, value from zhr_pcc_params into table @data(lt_params)
+* Read the values from the ZUSE_PCC_PARAMS table
+    select function, value from zuse_pcc_params into table @data(lt_params)
       where type       eq @if_pyd_ty_rt~mv_type
         and ( function eq 'INCLUDE' or function eq 'EXCLUDE' ).
 * Prcoess each of the parameter table entries
