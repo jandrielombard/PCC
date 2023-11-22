@@ -12,20 +12,6 @@
     <OBJECTTYPE>C</OBJECTTYPE>
     <DDTEXT>PCC Process / Step Template custom text</DDTEXT>
    </OBJT>
-   <OBJS>
-    <OBJS>
-     <OBJECTNAME>ZHRPYC_PCC_TEXT</OBJECTNAME>
-     <OBJECTTYPE>C</OBJECTTYPE>
-     <TABNAME>ZHRPY_PCC_TEXTV</TABNAME>
-     <DDIC>X</DDIC>
-    </OBJS>
-    <OBJS>
-     <OBJECTNAME>ZHRPYC_PCC_TEXT</OBJECTNAME>
-     <OBJECTTYPE>C</OBJECTTYPE>
-     <TABNAME>ZHRPY_PCC_VTXKEY</TABNAME>
-     <DDIC>X</DDIC>
-    </OBJS>
-   </OBJS>
   </asx:values>
  </asx:abap>
 </abapGit>

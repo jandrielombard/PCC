@@ -1832,7 +1832,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
 *    |            |         |Reporting                  |             *
 *---------------------------------------------------------------------*
     data lt_sh_pernrs_so type /iwbep/t_cod_select_options.
-
+BREAK-POINT.
 *   Off-cycle does not support in this runtime class
     if is_off_cycle_run( io_res_context = io_res_context ) = abap_true.
       return.
@@ -1982,6 +1982,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
                     io_res_context = io_res_context ).
 
     " In real world you no need implement so many RDTS Maybe just one is enough
+*message a000(ZHRAU_RPT).
     case is_rd-rd->mv_rd_type.
       when 'SAP_SFO' or 'SAP_GOV'.
         "Sample for display report result into screen
@@ -2154,7 +2155,6 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
 * Parallel Process using Multithread
     check not it_pernr is initial.
 
-   break jlombard.
 
 * Set number of dialog processes for the parallel processing
     call method me->check_avail_server.

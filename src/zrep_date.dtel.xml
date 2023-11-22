@@ -15,7 +15,9 @@
     <SCRTEXT_S>Crea. Date</SCRTEXT_S>
     <SCRTEXT_M>Creation Date</SCRTEXT_M>
     <SCRTEXT_L>Creation Date</SCRTEXT_L>
+    <ACTFLAG>I</ACTFLAG>
     <DTELMASTER>E</DTELMASTER>
+    <RESERVEDTE>JB</RESERVEDTE>
     <REFKIND>D</REFKIND>
    </DD04V>
   </asx:values>
