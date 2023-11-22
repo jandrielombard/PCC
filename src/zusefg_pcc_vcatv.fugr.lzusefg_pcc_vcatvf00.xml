@@ -3,7 +3,8 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>LZUSE_PCC_PARAMST00</NAME>
+    <NAME>LZUSEFG_PCC_VCATVF00</NAME>
+    <SQLX>X</SQLX>
     <SUBC>I</SUBC>
     <RLOAD>E</RLOAD>
    </PROGDIR>

@@ -3,9 +3,14 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>LZUSE_PCC_PARAMST00</NAME>
+    <NAME>LZUSEFG_PCC_VCATVTOP</NAME>
+    <DBAPL>S</DBAPL>
+    <DBNA>D$</DBNA>
     <SUBC>I</SUBC>
-    <RLOAD>E</RLOAD>
+    <APPL>S</APPL>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+    <UCCHECK>X</UCCHECK>
    </PROGDIR>
   </asx:values>
  </asx:abap>

@@ -15,9 +15,7 @@
     <SCRTEXT_S>Upd Status</SCRTEXT_S>
     <SCRTEXT_M>Update Status</SCRTEXT_M>
     <SCRTEXT_L>Update Status</SCRTEXT_L>
-    <ACTFLAG>I</ACTFLAG>
     <DTELMASTER>E</DTELMASTER>
-    <RESERVEDTE>JB</RESERVEDTE>
     <REFKIND>D</REFKIND>
    </DD04V>
   </asx:values>

@@ -15,9 +15,7 @@
     <SCRTEXT_S>V Category</SCRTEXT_S>
     <SCRTEXT_M>Validation Category</SCRTEXT_M>
     <SCRTEXT_L>Validation Category</SCRTEXT_L>
-    <ACTFLAG>I</ACTFLAG>
     <DTELMASTER>E</DTELMASTER>
-    <RESERVEDTE>JB</RESERVEDTE>
     <REFKIND>D</REFKIND>
    </DD04V>
   </asx:values>

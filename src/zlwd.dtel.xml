@@ -15,9 +15,7 @@
     <SCRTEXT_S>LWD(FT/PT)</SCRTEXT_S>
     <SCRTEXT_M>LWD (FT/PT) position</SCRTEXT_M>
     <SCRTEXT_L>Last date on permanent (FT/PT) position</SCRTEXT_L>
-    <ACTFLAG>I</ACTFLAG>
     <DTELMASTER>E</DTELMASTER>
-    <RESERVEDTE>JB</RESERVEDTE>
     <REFKIND>D</REFKIND>
    </DD04V>
   </asx:values>

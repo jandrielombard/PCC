@@ -36,8 +36,7 @@ data: g_completed  type abap_bool,
       gt_report    type list_string_table,
       g_jobnam     type tbtc_spoolid-jobname.
 constants: gc_orig_spool_merg_prog type zhr_mer_prg
-*                           value 'ZHR_SPOOL_MERGE'.
-                           value 'ZUSEHRAUREPY_PCC_SPOOL_MERGE'.
+                           value 'ZHUSE_SPOOL_MERGE'.
 
 types: begin of ty_spool_objects,
          spoolid    type btclistid,

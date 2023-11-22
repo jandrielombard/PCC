@@ -27,6 +27,7 @@ CLASS ZUSECL_PYC_STT_ASYNC_MAN_BASE IMPLEMENTATION.
     DATA: lt_text    TYPE TABLE OF zuse_pcc_text,
           ls_text    TYPE zuse_pcc_text,
           lv_process TYPE pyd_classid.
+break-point 'JLOMBARD'.
     CLEAR rs_redef-text.
 
     "get process template name
