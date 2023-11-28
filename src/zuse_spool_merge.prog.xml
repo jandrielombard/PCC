@@ -16,6 +16,48 @@
      <ENTRY>Spool merge program</ENTRY>
      <LENGTH>19</LENGTH>
     </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CALL</KEY>
+     <ENTRY>Spools created by program</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DATE</KEY>
+     <ENTRY>Job creation date</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_JOBCNT</KEY>
+     <ENTRY>Job count</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_JOBNAM</KEY>
+     <ENTRY>Job name</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_SECS</KEY>
+     <ENTRY>Job count variance(seconds)</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_USER</KEY>
+     <ENTRY>Spool created by user</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_TITLE</KEY>
+     <ENTRY>Spool title</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
    </TPOOL>
   </asx:values>
  </asx:abap>

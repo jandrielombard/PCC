@@ -23,7 +23,7 @@ ENDCLASS.
 CLASS ZUSECL_PYC_BPC_SELECT_STP2 IMPLEMENTATION.
 
 
-  METHOD GET_LEADING_TIME_SELECTION.
+  method get_leading_time_selection.
 *----------------------------------------------------------------------*
 *Date      |User ID |Description              |Chg. Ref.|WkBh Req      *
 *----------------------------------------------------------------------*
@@ -34,184 +34,212 @@ CLASS ZUSECL_PYC_BPC_SELECT_STP2 IMPLEMENTATION.
 *----------------------------------------------------------------------*
 
 * Populate Selection Parameters
-    CONSTANTS: lc_abkrs        TYPE pyd_par_type VALUE 'ABKRS',
-               lc_period       TYPE pyd_par_type VALUE 'PERIOD',
-               lc_test_run     TYPE pyd_par_type VALUE 'Z99_TEST_RUN',
-               lc_update_db    TYPE pyd_par_type VALUE 'Z99_UPDATE_DB',
-               lc_sel_timed    TYPE rsscr_name   VALUE 'PNPTIMED',
-               lc_par_pnppabrp TYPE rsscr_name   VALUE 'PNPPABRP',
-               lc_par_pnppabrj TYPE rsscr_name   VALUE 'PNPPABRJ',
-               lc_par_pnpxabkr TYPE rsscr_name   VALUE 'PNPXABKR',
-               lc_par_pnpabkrs TYPE rsscr_name   VALUE 'PNPABKRS',
-               lc_par_submit   TYPE rsscr_name   VALUE 'SUBMIT',
-               lc_par_update   TYPE rsscr_name   VALUE 'UPDATE',
-               lc_par_runty    TYPE rsscr_name   VALUE 'RUNTY',
-               lc_par_upddb    TYPE rsscr_name   VALUE 'UPD',
-               lc_par_noupd    TYPE rsscr_name   VALUE 'NOUPD',
-               lc_x            TYPE c            VALUE 'X',
-               lc_i            TYPE tvarv_sign   VALUE 'I',
-               lc_p            TYPE tvarv_sign   VALUE 'P',
-               lc_eq           TYPE tvarv_opti   VALUE 'EQ',
-               lc_two          TYPE c            VALUE '2',
-               lc_blank        TYPE c            VALUE ' ',
-               lc_par_spool    TYPE rsscr_name   VALUE 'SPOOL'.
+    constants: lc_abkrs        type pyd_par_type value 'ABKRS',
+               lc_period       type pyd_par_type value 'PERIOD',
+               lc_test_run     type pyd_par_type value 'Z99_TEST_RUN',
+               lc_update_db    type pyd_par_type value 'Z99_UPDATE_DB',
+               lc_sel_timed    type rsscr_name   value 'PNPTIMED',
+               lc_par_pnppabrp type rsscr_name   value 'PNPPABRP',
+               lc_par_pnppabrj type rsscr_name   value 'PNPPABRJ',
+               lc_par_pnpxabkr type rsscr_name   value 'PNPXABKR',
+               lc_par_pnpabkrs type rsscr_name   value 'PNPABKRS',
+               lc_par_submit   type rsscr_name   value 'SUBMIT',
+               lc_par_update   type rsscr_name   value 'UPDATE',
+               lc_par_runty    type rsscr_name   value 'RUNTY',
+               lc_par_upddb    type rsscr_name   value 'UPD',
+               lc_par_noupd    type rsscr_name   value 'NOUPD',
+               lc_x            type c            value 'X',
+               lc_i            type tvarv_sign   value 'I',
+               lc_p            type tvarv_sign   value 'P',
+               lc_eq           type tvarv_opti   value 'EQ',
+               lc_two          type c            value '2',
+               lc_blank        type c            value ' ',
+               lc_par_spool    type rsscr_name   value 'SPOOL',
+               lc_excel        type rsscr_name   value 'DOWN_CHK',
+               lc_pc           type rsscr_name   value 'PC_CHK',
+               lc_server       type rsscr_name   value 'DOSF_CHK'.
 
-    DATA:ls_par          TYPE pyd_s_resp,
-         ls_sel_params   TYPE LINE OF rsparams_tt,
-         lv_sel_name     TYPE char8,
-         lv_pabrj        TYPE pabrj,
-         lv_pabrp        TYPE pabrp,
-         lc_tst_flag     TYPE c.
+    data:ls_par        type pyd_s_resp,
+         ls_sel_params type line of rsparams_tt,
+         lv_sel_name   type char8,
+         lv_pabrj      type pabrj,
+         lv_pabrp      type pabrp,
+         lc_tst_flag   type c.
 
-    CLEAR et_sel_params.
+    clear et_sel_params.
 
 *check PERIOD exist; if exist set to the other period
-    READ TABLE it_par INTO ls_par WITH KEY par_type = gc_par_type-period.
-    IF sy-subrc = 0.
-      CLEAR ls_sel_params .
+    read table it_par into ls_par with key par_type = gc_par_type-period.
+    if sy-subrc = 0.
+      clear ls_sel_params .
       ls_sel_params-selname = lc_sel_timed.
       ls_sel_params-kind    = lc_p.
       ls_sel_params-sign    = lc_i .
       ls_sel_params-option  = lc_eq .
       ls_sel_params-low     = lc_two .
-      APPEND ls_sel_params TO et_sel_params .
-    ENDIF.
+      append ls_sel_params to et_sel_params .
+    endif.
 
 
 * Set ABKRS, Period Begda and Period Endda
-    LOOP AT it_par INTO ls_par.
-      CASE ls_par-par_type.
-        WHEN lc_abkrs.
+    loop at it_par into ls_par.
+      case ls_par-par_type.
+        when lc_abkrs.
 * Populate PNPXABKR
           lv_sel_name = lc_par_pnpxabkr.
 
-          CLEAR ls_sel_params .
-          MOVE-CORRESPONDING ls_par TO ls_sel_params.
+          clear ls_sel_params .
+          move-corresponding ls_par to ls_sel_params.
           ls_sel_params-sign    = lc_i .
           ls_sel_params-option  = lc_eq .
           ls_sel_params-selname = lv_sel_name.
-          APPEND ls_sel_params TO et_sel_params  .
+          append ls_sel_params to et_sel_params  .
 
 * Populate PNPABKRS
           lv_sel_name = lc_par_pnpabkrs.
 
-          CLEAR ls_sel_params .
-          MOVE-CORRESPONDING ls_par TO ls_sel_params.
+          clear ls_sel_params .
+          move-corresponding ls_par to ls_sel_params.
           ls_sel_params-sign    = lc_i .
           ls_sel_params-option  = lc_eq .
           ls_sel_params-selname = lv_sel_name.
-          APPEND ls_sel_params TO et_sel_params  .
+          append ls_sel_params to et_sel_params  .
 
 *if period exist, assign other period
-        WHEN lc_period.
+        when lc_period.
           lv_pabrj = ls_par-low(4).
           lv_pabrp = ls_par-low+4(2).
 
           lv_sel_name = lc_par_pnppabrp.
-          CLEAR ls_sel_params .
-          MOVE-CORRESPONDING ls_par TO ls_sel_params.
+          clear ls_sel_params .
+          move-corresponding ls_par to ls_sel_params.
           ls_sel_params-sign    = lc_i .
           ls_sel_params-option  = lc_eq .
           ls_sel_params-selname = lv_sel_name.
           ls_sel_params-low     = lv_pabrp.
-          APPEND ls_sel_params TO et_sel_params .
+          append ls_sel_params to et_sel_params .
 
           lv_sel_name = lc_par_pnppabrj.
-          CLEAR ls_sel_params .
-          MOVE-CORRESPONDING ls_par TO ls_sel_params.
+          clear ls_sel_params .
+          move-corresponding ls_par to ls_sel_params.
           ls_sel_params-sign    = lc_i .
           ls_sel_params-option  = lc_eq .
           ls_sel_params-selname = lv_sel_name.
           ls_sel_params-low     = lv_pabrj.
-          APPEND ls_sel_params TO et_sel_params .
+          append ls_sel_params to et_sel_params .
 
-        WHEN lc_test_run.
+        when lc_test_run.
 * Parameter Run Type
           lv_sel_name = lc_par_runty.
-          CLEAR ls_sel_params .
+          clear ls_sel_params .
           ls_sel_params-selname = lv_sel_name.
           ls_sel_params-kind    = lc_p.
           ls_sel_params-sign    = lc_i .
           ls_sel_params-option  = lc_eq .
 *Set lc_tst_flag if test indicator is 'X'
           ls_sel_params-low    = lc_tst_flag  = ls_par-low.
-          APPEND ls_sel_params TO et_sel_params.
+          append ls_sel_params to et_sel_params.
 
-        WHEN  lc_update_db.
+        when  lc_update_db.
 *Parameter Test Run with Update/No UPD to DB for STP2
 *Check if test indicator is set as 'X'
-          IF lc_tst_flag = lc_x.
+          if lc_tst_flag = lc_x.
 *Check if UPD is set as 'X'
-            IF ls_par-low = lc_x.
+            if ls_par-low = lc_x.
               lv_sel_name = lc_par_upddb.
-              CLEAR ls_sel_params .
+              clear ls_sel_params .
               ls_sel_params-selname = lv_sel_name.
               ls_sel_params-kind    = lc_p.
               ls_sel_params-sign    = lc_i .
               ls_sel_params-option  = lc_eq .
               ls_sel_params-low     = ls_par-low.
-              APPEND ls_sel_params TO et_sel_params.
+              append ls_sel_params to et_sel_params.
 *Clear the noupd radiobutton if UPD is set to 'X'
               lv_sel_name = lc_par_noupd.
-              CLEAR ls_sel_params .
+              clear ls_sel_params .
               ls_sel_params-selname = lv_sel_name.
               ls_sel_params-kind    = lc_p.
               ls_sel_params-sign    = lc_i .
               ls_sel_params-option  = lc_eq .
               ls_sel_params-low     = lc_blank.
-              APPEND ls_sel_params TO et_sel_params.
-            ELSE.
+              append ls_sel_params to et_sel_params.
+            else.
               lv_sel_name = lc_par_noupd.
-              CLEAR ls_sel_params .
+              clear ls_sel_params .
               ls_sel_params-selname = lv_sel_name.
               ls_sel_params-kind    = lc_p.
               ls_sel_params-sign    = lc_i .
               ls_sel_params-option  = lc_eq .
               ls_sel_params-low     = lc_x.
-              APPEND ls_sel_params TO et_sel_params.
-            ENDIF.
-            CLEAR lc_tst_flag.
-          ENDIF.
+              append ls_sel_params to et_sel_params.
+            endif.
+            clear lc_tst_flag.
+          endif.
 
-        WHEN OTHERS.
-      ENDCASE.
-    ENDLOOP.
+        when others.
+      endcase.
+    endloop.
 
 * Parameter Submit
     lv_sel_name = lc_par_submit.
-    CLEAR ls_sel_params .
+    clear ls_sel_params .
     ls_sel_params-selname = lv_sel_name.
     ls_sel_params-kind    = lc_p.
     ls_sel_params-sign    = lc_i .
     ls_sel_params-option  = lc_eq .
     ls_sel_params-low     = abap_true.
-    APPEND ls_sel_params TO et_sel_params .
+    append ls_sel_params to et_sel_params .
 
 * Parameter Update
     lv_sel_name = lc_par_update.
-    CLEAR ls_sel_params .
+    clear ls_sel_params .
     ls_sel_params-selname = lv_sel_name.
     ls_sel_params-kind    = lc_p.
     ls_sel_params-sign    = lc_i .
     ls_sel_params-option  = lc_eq .
     ls_sel_params-low     = lc_blank.
-    APPEND ls_sel_params TO et_sel_params .
+    append ls_sel_params to et_sel_params .
 
 * Parameter Spool Down load
     lv_sel_name = lc_par_spool.
-    CLEAR ls_sel_params .
+    clear ls_sel_params .
     ls_sel_params-selname = lv_sel_name.
     ls_sel_params-kind    = lc_p.
     ls_sel_params-sign    = lc_i .
     ls_sel_params-option  = lc_eq .
     ls_sel_params-low     = abap_true.
-    APPEND ls_sel_params TO et_sel_params.
+    append ls_sel_params to et_sel_params.
 
-    IF lines( et_sel_params ) = 0 .
-      RAISE EXCEPTION TYPE cx_pyc_cont
-        EXPORTING
+* Parameter App Server download
+    lv_sel_name = lc_server.
+    clear ls_sel_params .
+    ls_sel_params-selname = lv_sel_name.
+    ls_sel_params-kind    = lc_p.
+    ls_sel_params-sign    = lc_i .
+    ls_sel_params-option  = lc_eq .
+    ls_sel_params-low     = abap_true.
+    append ls_sel_params to et_sel_params.
+
+*   Remove pc download radiobutton
+    lv_sel_name = lc_pc.
+    ls_sel_params-selname = lv_sel_name.
+    ls_sel_params-low     = abap_false.
+    append ls_sel_params to et_sel_params.
+* Parameter excel
+    lv_sel_name = lc_excel.
+    clear ls_sel_params .
+    ls_sel_params-selname = lv_sel_name.
+    ls_sel_params-kind    = lc_p.
+    ls_sel_params-sign    = lc_i .
+    ls_sel_params-option  = lc_eq .
+    ls_sel_params-low     = abap_true.
+    append ls_sel_params to et_sel_params.
+
+    if lines( et_sel_params ) = 0 .
+      raise exception type cx_pyc_cont
+        exporting
           textid = cx_pyc_cont=>get_leading_time_selection_err.
-    ENDIF.
+    endif.
 
-  ENDMETHOD.
+  endmethod.
 ENDCLASS.

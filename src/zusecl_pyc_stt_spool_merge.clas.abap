@@ -7,7 +7,7 @@ class ZUSECL_PYC_STT_SPOOL_MERGE definition
 public section.
 protected section.
 
-  constants MC_SELECTION_CLS_SPOOLMERGE type PYD_PAR_TYPE value 'ZCL_PYC_BPC_SELECTION_SM' ##NO_TEXT.
+  constants MC_SELECTION_CLS_SPOOLMERGE type PYD_PAR_TYPE value 'ZUSECL_PYC_BPC_SELECTION_SM' ##NO_TEXT.
 
   methods FP3_BPC_DET_RT_GET_LIST
     redefinition .
@@ -23,6 +23,7 @@ CLASS ZUSECL_PYC_STT_SPOOL_MERGE IMPLEMENTATION.
 * Assign Report, Selection and Log Classes
     " one report via one job
     data ls_dto type cl_pyc_rd_dto_bpc=>ty_s_rd.
+
     ls_dto-rpt_chain_id = '001'.
     ls_dto-rpt_cat = if_pyc_bpc_report=>category-pm_support .
     ls_dto-rpt_type = 'PROGRAM'.

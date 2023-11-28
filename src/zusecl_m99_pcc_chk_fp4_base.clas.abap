@@ -1832,7 +1832,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
 *    |            |         |Reporting                  |             *
 *---------------------------------------------------------------------*
     data lt_sh_pernrs_so type /iwbep/t_cod_select_options.
-
+BREAK-POINT.
 *   Off-cycle does not support in this runtime class
     if is_off_cycle_run( io_res_context = io_res_context ) = abap_true.
       return.
@@ -1982,6 +1982,8 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
                     io_res_context = io_res_context ).
 
     " In real world you no need implement so many RDTS Maybe just one is enough
+
+
     case is_rd-rd->mv_rd_type.
       when 'SAP_SFO' or 'SAP_GOV'.
         "Sample for display report result into screen
@@ -2055,6 +2057,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
           ).
 
       when 'YK_AUDIT_REPORT'.
+
         yk_audit_report(
         exporting
           is_rd          = is_rd    " Result Detail Generic
@@ -2154,7 +2157,6 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
 * Parallel Process using Multithread
     check not it_pernr is initial.
 
-   break jlombard.
 
 * Set number of dialog processes for the parallel processing
     call method me->check_avail_server.
@@ -2985,7 +2987,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
   endmethod.
 
 
-  method YK_AUDIT_REPORT.
+  method yk_audit_report.
     data: lt_rt             type ty_t_rt_with_text,
           ls_rt             type ty_s_rt_with_text,
           lt_txt            type cl_pyd_rd_dto_t=>ty_t_rd,
@@ -3016,11 +3018,11 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
           ls_t569u          type t569u,
           ls_pcl4           type pcl4.
 
-    data: lt_pernr_tab   type range of p_pernr,
-          infty_tab      type range of subty,
-          doc_key_tab    type standard table of pldoc_key,
-          ls_doc_key_tab like line of doc_key_tab,
-          ls_pernr       like line of lt_pernr_tab.
+    data: lt_pernr_tab    type range of p_pernr,
+          doc_key_tab     type standard table of pldoc_key,
+          ls_doc_key      like line of doc_key_tab,
+          ls_pernr        like line of lt_pernr_tab,
+          infty_tab_after type table of prelp.
 
     loop at it_par into ls_par.
 
@@ -3079,8 +3081,8 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
     translate ls_t569u-uzeit using comp_nine.
 
     "no previous period found. This must be the very first period
-    if LS_T569U-AEDAT = '99999999'.
-      LS_T569U-AEDAT = LV_BEGDA - 14.
+    if ls_t569u-aedat = '99999999'.
+      ls_t569u-aedat = lv_begda - 14.
       ls_t569u-uzeit = '010000'.
     endif.
 
@@ -3093,6 +3095,13 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
     ls_pernr-option = 'EQ'.
     ls_pernr-low    = lv_pernr.
     append ls_pernr to lt_pernr_tab.
+
+*   Filter by infotype based on table zuse_pcc_audtinf
+    select 'I' as sign,
+           'EQ' as option,
+           infty as low, infty as high
+    into table @data(infty_tab)
+    from zuse_pcc_audtinf.
 
     call function 'HR_INFOTYPE_LOG_GET_LIST'
       exporting
@@ -3107,10 +3116,12 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
 
     sort doc_key_tab by bdate btime descending infty ascending.
 
-    loop at doc_key_tab into ls_doc_key_tab where bdate = ls_t569u-aedat and btime lt ls_t569u-uzeit.
+    loop at doc_key_tab into ls_doc_key where bdate = ls_t569u-aedat and btime lt ls_t569u-uzeit.
       "remove items that were change on same day as payroll exited, but before payroll was complete
       delete doc_key_tab index sy-tabix.
     endloop.
+
+
     constants: c_tab type c value cl_abap_char_utilities=>horizontal_tab.
 
     describe table doc_key_tab lines lv_size.
@@ -3120,20 +3131,37 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
       ls_txt-text   = 'No Master Data changes during pay period'.
       append ls_txt to lt_txt.
     else.
-      ls_txt-text   = 'Infotype' && c_tab && 'Date' && c_tab && 'Time' && c_tab && 'User' .  "'This is the first line of the text.'.
+      ls_txt-text   = 'Infotype' && c_tab && 'Subtype' && c_tab && 'Subtype Text' && c_tab && 'Date' && c_tab && 'Time' && c_tab && 'User' .  "'This is the first line of the text.'.
       append ls_txt to lt_txt.
-      loop at doc_key_tab into ls_doc_key_tab.
+      loop at doc_key_tab into ls_doc_key.
+        "Get subtype
+        " Get details for document
+        data(subrc) = value sy-subrc( ).
+        CLEAR infty_tab_after.
+        call function 'HR_INFOTYPE_LOG_GET_DETAIL'
+          exporting
+            logged_infotype = ls_doc_key
+          importing
+            subrc           = subrc
+          tables
+            infty_tab_after = infty_tab_after.
+
+        if subrc = 0 and infty_tab_after is NOT INITIAL.
+            data(lv_subty) = infty_tab_after[ 1 ]-subty.
+        endif.
+
+
         add 1 to lv_row_id .
         ls_txt-row_id = lv_row_id .
         call function 'CONVERSION_EXIT_PDATE_OUTPUT'
           exporting
-            input  = ls_doc_key_tab-bdate
+            input  = ls_doc_key-bdate
           importing
             output = lv_datum.
 
         call function 'CONVERSION_EXIT_RSTIM_OUTPUT'
           exporting
-            input  = ls_doc_key_tab-btime
+            input  = ls_doc_key-btime
           importing
             output = lv_time.
 
@@ -3141,9 +3169,14 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
           from usr21 join adrp on usr21~persnumber = adrp~persnumber and
                                   adrp~date_from   = '00010101'      and
                                   adrp~nation      = ''
-          where usr21~bname = ls_doc_key_tab-uname.
+          where usr21~bname = ls_doc_key-uname.
 
-        ls_txt-text   = ls_doc_key_tab-infty && c_tab && lv_datum && c_tab && lv_time && c_tab && lv_name_text.
+          select single stext     from  t591s into @data(lv_subty_txt)
+                 where  sprsl  = 'EN'
+                 and    infty  = @ls_doc_key-infty
+                 and    subty  = @lv_subty.
+
+        ls_txt-text   = ls_doc_key-infty && c_tab && lv_subty &&  c_tab && lv_subty_txt && c_tab && lv_datum && c_tab && lv_time && c_tab && lv_name_text.
         append ls_txt to lt_txt.
       endloop.
     endif.

@@ -311,7 +311,7 @@ CLASS ZUSECL_PYC_KPI_PAYROLL_EE_CNT IMPLEMENTATION.
     data: lt_alist type standard table of abaplist,
           lt_tlist type list_string_table.
 * Submit Spool Merge Program to Collect All the Spool Outputs.
-    submit zhraurepy_pcc_spool_merge
+    submit zusehraurepy_pcc_spool_merge
       with s_jobnam in it_jobnam
       with s_jobcnt in it_jobcnt
       with p_wfmt eq abap_true

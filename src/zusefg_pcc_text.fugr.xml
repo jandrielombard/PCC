@@ -437,7 +437,6 @@
        <FORMAT>CHAR</FORMAT>
        <FROM_DICT>X</FROM_DICT>
        <MODIFIC>3</MODIFIC>
-       <UP_LOWER>X</UP_LOWER>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -514,6 +513,7 @@
        <CONT_NAME>TCTRL_ZUSE_PCC_TEXT</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
        <NAME>ZUSE_PCC_TEXT-TEXTLINE</NAME>
+       <TEXT>____________________________________________________________________________________________________________________________________</TEXT>
        <LINE>001</LINE>
        <COLUMN>004</COLUMN>
        <LENGTH>255</LENGTH>
@@ -521,6 +521,7 @@
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
        <UP_LOWER>X</UP_LOWER>
        <INPUT_FLD>X</INPUT_FLD>
        <OUTPUT_FLD>X</OUTPUT_FLD>
