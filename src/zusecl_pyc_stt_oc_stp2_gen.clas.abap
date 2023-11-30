@@ -15,7 +15,7 @@ public section.
   types:
     job_t_key type standard table of job_s_key .
 
-  constants GC_SUB_CLSNM type CLASSNAME value 'ZCL_PYC_BPC_SELECTION_OC_STP2' ##NO_TEXT.
+  constants GC_SUB_CLSNM type CLASSNAME value 'ZUSECL_PYC_BPC_SELECT_OC_STP2' ##NO_TEXT.
 
   methods CONSTRUCTOR
     importing

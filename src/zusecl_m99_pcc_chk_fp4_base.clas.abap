@@ -3018,11 +3018,12 @@ BREAK-POINT.
           ls_t569u          type t569u,
           ls_pcl4           type pcl4.
 
-    data: lt_pernr_tab    type range of p_pernr,
-          doc_key_tab     type standard table of pldoc_key,
-          ls_doc_key      like line of doc_key_tab,
-          ls_pernr        like line of lt_pernr_tab,
-          infty_tab_after type table of prelp.
+    data: lt_pernr_tab     type range of p_pernr,
+          doc_key_tab      type table of pldoc_key,
+          ls_doc_key       like line of doc_key_tab,
+          ls_pernr         like line of lt_pernr_tab,
+          infty_tab_before type table of prelp,
+          infty_tab_after  type table of prelp.
 
     loop at it_par into ls_par.
 
@@ -3099,9 +3100,12 @@ BREAK-POINT.
 *   Filter by infotype based on table zuse_pcc_audtinf
     select 'I' as sign,
            'EQ' as option,
-           infty as low, infty as high
+           infty as low ", infty as high
     into table @data(infty_tab)
     from zuse_pcc_audtinf.
+
+    data lt_infty_range_tabe type infty_range_tab.
+    lt_infty_range_tabe = infty_tab.
 
     call function 'HR_INFOTYPE_LOG_GET_LIST'
       exporting
@@ -3111,7 +3115,7 @@ BREAK-POINT.
         subrc              = lv_subrc
       tables
         pernr_tab          = lt_pernr_tab
-        infty_tab          = infty_tab
+        infty_tab          = lt_infty_range_tabe
         infty_logg_key_tab = doc_key_tab.
 
     sort doc_key_tab by bdate btime descending infty ascending.
@@ -3123,6 +3127,7 @@ BREAK-POINT.
 
 
     constants: c_tab type c value cl_abap_char_utilities=>horizontal_tab.
+    constants: c_size type c value cl_abap_char_utilities=>CHARSIZE.
 
     describe table doc_key_tab lines lv_size.
 
@@ -3131,23 +3136,26 @@ BREAK-POINT.
       ls_txt-text   = 'No Master Data changes during pay period'.
       append ls_txt to lt_txt.
     else.
-      ls_txt-text   = 'Infotype' && c_tab && 'Subtype' && c_tab && 'Subtype Text' && c_tab && 'Date' && c_tab && 'Time' && c_tab && 'User' .  "'This is the first line of the text.'.
+      ls_txt-text   =  'Ch.Date / Infotype / Subtype / Subtype Text / User' .  "'This is the first line of the text.'.
+*      ls_txt-text   =  'Date  Infotype   Subtype'  && c_tab && c_tab && c_tab && 'Subtype Text' && c_tab && 'Date' && c_tab && 'Time' && c_tab && 'User' .  "'This is the first line of the text.'.
       append ls_txt to lt_txt.
+
       loop at doc_key_tab into ls_doc_key.
         "Get subtype
         " Get details for document
         data(subrc) = value sy-subrc( ).
-        CLEAR infty_tab_after.
+        clear infty_tab_after.
         call function 'HR_INFOTYPE_LOG_GET_DETAIL'
           exporting
-            logged_infotype = ls_doc_key
+            logged_infotype  = ls_doc_key
           importing
-            subrc           = subrc
+            subrc            = subrc
           tables
-            infty_tab_after = infty_tab_after.
+            infty_tab_before = infty_tab_after
+            infty_tab_after  = infty_tab_after.
 
-        if subrc = 0 and infty_tab_after is NOT INITIAL.
-            data(lv_subty) = infty_tab_after[ 1 ]-subty.
+        if subrc = 0 and infty_tab_after is not initial.
+          data(lv_subty) = infty_tab_after[ 1 ]-subty.
         endif.
 
 
@@ -3159,11 +3167,11 @@ BREAK-POINT.
           importing
             output = lv_datum.
 
-        call function 'CONVERSION_EXIT_RSTIM_OUTPUT'
-          exporting
-            input  = ls_doc_key-btime
-          importing
-            output = lv_time.
+***        call function 'CONVERSION_EXIT_RSTIM_OUTPUT'
+***          exporting
+***            input  = ls_doc_key-btime
+***          importing
+***            output = lv_time.
 
         select single adrp~name_text into lv_name_text
           from usr21 join adrp on usr21~persnumber = adrp~persnumber and
@@ -3171,20 +3179,34 @@ BREAK-POINT.
                                   adrp~nation      = ''
           where usr21~bname = ls_doc_key-uname.
 
-          select single stext     from  t591s into @data(lv_subty_txt)
-                 where  sprsl  = 'EN'
-                 and    infty  = @ls_doc_key-infty
-                 and    subty  = @lv_subty.
+        data(lv_stext) = value  sbttx( ).
 
-        ls_txt-text   = ls_doc_key-infty && c_tab && lv_subty &&  c_tab && lv_subty_txt && c_tab && lv_datum && c_tab && lv_time && c_tab && lv_name_text.
+        call function 'HR_GET_SUBTYPE_TEXT'
+          exporting
+            infty               = ls_doc_key-infty
+            subty               = lv_subty
+          importing
+            stext               = lv_stext
+          exceptions
+            infty_not_found     = 1
+            subty_not_found     = 2
+            infty_not_supported = 3
+            others              = 4.
+
+
+*        ls_txt-text   = lv_datum && c_tab && ls_doc_key-infty && c_tab && lv_subty &&   '/'  && lv_stext && c_tab && c_tab  && c_tab && lv_name_text.
+        ls_txt-text   = |{ lv_datum } / { ls_doc_key-infty } / { lv_subty } / { lv_stext } / { lv_name_text }|.
+
         append ls_txt to lt_txt.
       endloop.
     endif.
+
 
     try.
         call method is_rd-rd->set_data
           exporting
             it_data = lt_txt.
+
       catch cx_pyd_fnd .
     endtry.
 
@@ -3855,6 +3877,8 @@ BREAK-POINT.
       lv_uuid      type guid_16,
       lv_ls_nm     type string,
       lv_list_name type char12 value 'PCC_CHK_NM'.
+
+ message x000(ZHRAU_RPT).
 
     clear lt_rt .
     lv_pernr  = is_rd-id.
