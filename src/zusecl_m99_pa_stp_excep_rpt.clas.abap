@@ -79,7 +79,7 @@ CLASS ZUSECL_M99_PA_STP_EXCEP_RPT IMPLEMENTATION.
      where it0006~pernr in @it_pernr_so
        and it0006~begda <= @mv_endda
        and it0006~endda >= @mv_begda
-       and it0006~subty = '1'   "permanent address
+       and it0006~subty = @mv_subty   "permanent address
        and it0000~pernr = it0006~pernr
        and it0000~begda <= @mv_endda
        and it0000~endda >= @mv_begda

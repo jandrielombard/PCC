@@ -3,15 +3,15 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD40V>
-    <TYPENAME>ZHRAUTTPY_PROC_INST_PH_EXPORT</TYPENAME>
+    <TYPENAME>ZPAKEY_TAB</TYPENAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <ROWTYPE>ZHRAUSTPY_PROC_INST_PH_EXPORT</ROWTYPE>
+    <ROWTYPE>PAKEY</ROWTYPE>
     <ROWKIND>S</ROWKIND>
     <DATATYPE>STRU</DATATYPE>
     <ACCESSMODE>T</ACCESSMODE>
     <KEYDEF>D</KEYDEF>
     <KEYKIND>N</KEYKIND>
-    <DDTEXT>Table Type for Process log for Export</DDTEXT>
+    <DDTEXT>Table of pakey</DDTEXT>
    </DD40V>
   </asx:values>
  </asx:abap>

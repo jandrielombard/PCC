@@ -1383,7 +1383,7 @@ CLASS ZUSECL_SBP_PYD_CHK_FP4_US_BAS IMPLEMENTATION.
   method set_stat2_default.
 * If the employee status range is empty, set it to default on active employees
     if mt_stat2 is initial.
-      append value #( sign = 'I' option = 'EQ' low = zcl_constants=>c_stat2_3 ) to mt_stat2.
+*      append value #( sign = 'I' option = 'EQ' low = zcl_constants=>c_stat2_3 ) to mt_stat2.
     endif.
   endmethod.
 

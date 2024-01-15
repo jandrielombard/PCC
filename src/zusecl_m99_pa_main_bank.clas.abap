@@ -235,7 +235,7 @@ CLASS ZUSECL_M99_PA_MAIN_BANK IMPLEMENTATION.
   endmethod.
 
 
-  method GET_SPECIFC_CUSTMIZING.
+  method get_specifc_custmizing.
 
     data: lt_param_so type /iwbep/t_cod_select_options,
           ls_par      type if_pyd_fnd_types=>ty_s_resp.
@@ -244,6 +244,10 @@ CLASS ZUSECL_M99_PA_MAIN_BANK IMPLEMENTATION.
 * Hire Date Check
         mv_z99_condition_it0041_01 =  cl_pyd_fnd_aux=>get_resp_fixed_value( iv_par_type = me->mc_z99_condition_it0041_01
                                                                             it_par      = mo_context->mt_par ).
+        loop at mo_context->mt_par into ls_par
+          where   par_type = mc_subty.
+          mv_subty = ls_par-low.
+        endloop.
       catch cx_pyd_fnd into data(lo_exception).
     endtry.
   endmethod.

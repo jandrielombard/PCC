@@ -87,7 +87,7 @@
     <item>
      <ID>I</ID>
      <KEY>013</KEY>
-     <ENTRY>&amp;1 - &amp;2</ENTRY>
+     <ENTRY>&amp;1  &amp;2</ENTRY>
      <LENGTH>17</LENGTH>
     </item>
     <item>
@@ -531,6 +531,11 @@
      <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
+     <CMPNAME>MC_INFTY2</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
      <CMPNAME>MC_KOSTL</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
@@ -607,6 +612,11 @@
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CMPNAME>MC_SUBTY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_SUBTY2</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Payroll Data Source Parameter Type</DESCRIPT>
     </SEOCOMPOTX>
@@ -761,6 +771,11 @@
      <DESCRIPT>Infotype</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
+     <CMPNAME>MV_INFTY2</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Infotype</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
      <CMPNAME>MV_LGART</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Wage Type</DESCRIPT>
@@ -807,6 +822,11 @@
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CMPNAME>MV_SUBTY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Subtype</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_SUBTY2</CMPNAME>
      <LANGU>E</LANGU>
      <DESCRIPT>Subtype</DESCRIPT>
     </SEOCOMPOTX>

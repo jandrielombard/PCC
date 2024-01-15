@@ -102,45 +102,47 @@ protected section.
   types:
     ty_t_bukrs_curr  type standard table of ty_s_bukrs_curr with non-unique key bukrs .
 
-  data mt_objdata type tty_objdata .
-  data ms_objdata type ty_objdata .
+  data MT_OBJDATA type TTY_OBJDATA .
+  data MS_OBJDATA type TY_OBJDATA .
   constants:
     begin of gcs_groupid,
       org_data type pyd_cont_groupid value 'ORG_DATA',
       pay_data type pyd_cont_groupid value 'PAY_DATA',
     end of gcs_groupid .
-  constants mc_param_abkrs type pyd_par_type value 'ABKRS' ##NO_TEXT.
-  constants mc_param_period type pyd_par_type value 'PERIOD' ##NO_TEXT.
-  constants mc_param_tpy_res type pyd_par_type value 'TPY_RES' ##NO_TEXT.
-  constants mc_pernr type pyd_par_type value 'PERNR' ##NO_TEXT.
-  constants mc_stat2 type pyd_par_type value 'Z99_STAT2' ##NO_TEXT.
-  constants mc_bukrs type pyd_par_type value 'BUKRS' ##NO_TEXT.
-  constants mc_persa type pyd_par_type value 'PERSA' ##NO_TEXT.
-  constants mc_btrtl type pyd_par_type value 'BTRTL' ##NO_TEXT.
-  constants mc_persg type pyd_par_type value 'PERSG' ##NO_TEXT.
-  constants mc_persk type pyd_par_type value 'PERSK' ##NO_TEXT.
-  constants mc_kostl type pyd_par_type value 'KOSTL' ##NO_TEXT.
-  constants mc_user_id type pyd_par_type value 'Z99_USER_ID' ##NO_TEXT.
-  constants mc_sprps type pyd_par_type value 'Z99_SPRPS' ##NO_TEXT.
-  constants mc_infty type pyd_par_type value 'Z99_INFTY' ##NO_TEXT.
-  constants mc_subty type pyd_par_type value 'Z99_SUBTY' ##NO_TEXT.
-  constants mc_lgart type pyd_par_type value 'LGART' ##NO_TEXT.
-  constants mc_exc_stat2 type pyd_par_type value 'Z99_EXC_STAT2' ##NO_TEXT.
-  constants mc_exc_bukrs type pyd_par_type value 'Z99_EXC_BUKRS' ##NO_TEXT.
-  constants mc_exc_persa type pyd_par_type value 'Z99_EXC_PERSA' ##NO_TEXT.
-  constants mc_exc_btrtl type pyd_par_type value 'Z99_EXC_BTRTL' ##NO_TEXT.
-  constants mc_exc_persg type pyd_par_type value 'Z99_EXC_PERSG' ##NO_TEXT.
-  constants mc_exc_persk type pyd_par_type value 'Z99_EXC_PERSK' ##NO_TEXT.
-  constants mc_exc_kostl type pyd_par_type value 'Z99_EXC_KOSTL' ##NO_TEXT.
-  constants mc_exc_user_id type pyd_par_type value 'Z99_EXC_USER_ID' ##NO_TEXT.
-  constants mc_exc_sprps type pyd_par_type value 'Z99_EXC_SPRPS' ##NO_TEXT.
-  constants mc_exc_infty type pyd_par_type value 'Z99_EXC_INFTY' ##NO_TEXT.
-  constants mc_exc_subty type pyd_par_type value 'Z99_EXC_SUBTY' ##NO_TEXT.
-  constants mc_exc_lgart type pyd_par_type value 'Z99_EXC_LGART' ##NO_TEXT.
-  constants mc_hyphen type pyd_name value ' - ' ##NO_TEXT.
-  constants mc_equal type pyd_name value '=' ##NO_TEXT.
-  constants mc_text_reason type pyd_name value 'Reason' ##NO_TEXT.
-  constants mc_high_date type datum value '99991231' ##NO_TEXT.
+  constants MC_PARAM_ABKRS type PYD_PAR_TYPE value 'ABKRS' ##NO_TEXT.
+  constants MC_PARAM_PERIOD type PYD_PAR_TYPE value 'PERIOD' ##NO_TEXT.
+  constants MC_PARAM_TPY_RES type PYD_PAR_TYPE value 'TPY_RES' ##NO_TEXT.
+  constants MC_PERNR type PYD_PAR_TYPE value 'PERNR' ##NO_TEXT.
+  constants MC_STAT2 type PYD_PAR_TYPE value 'Z99_STAT2' ##NO_TEXT.
+  constants MC_BUKRS type PYD_PAR_TYPE value 'BUKRS' ##NO_TEXT.
+  constants MC_PERSA type PYD_PAR_TYPE value 'PERSA' ##NO_TEXT.
+  constants MC_BTRTL type PYD_PAR_TYPE value 'BTRTL' ##NO_TEXT.
+  constants MC_PERSG type PYD_PAR_TYPE value 'PERSG' ##NO_TEXT.
+  constants MC_PERSK type PYD_PAR_TYPE value 'PERSK' ##NO_TEXT.
+  constants MC_KOSTL type PYD_PAR_TYPE value 'KOSTL' ##NO_TEXT.
+  constants MC_USER_ID type PYD_PAR_TYPE value 'Z99_USER_ID' ##NO_TEXT.
+  constants MC_SPRPS type PYD_PAR_TYPE value 'Z99_SPRPS' ##NO_TEXT.
+  constants MC_INFTY2 type PYD_PAR_TYPE value 'INFTY' ##NO_TEXT.
+  constants MC_INFTY type PYD_PAR_TYPE value 'Z99_INFOTYPE' ##NO_TEXT.
+  constants MC_SUBTY2 type PYD_PAR_TYPE value 'SUBTY' ##NO_TEXT.
+  constants MC_SUBTY type PYD_PAR_TYPE value 'Z99_SUBTYP' ##NO_TEXT.
+  constants MC_LGART type PYD_PAR_TYPE value 'LGART' ##NO_TEXT.
+  constants MC_EXC_STAT2 type PYD_PAR_TYPE value 'Z99_EXC_STAT2' ##NO_TEXT.
+  constants MC_EXC_BUKRS type PYD_PAR_TYPE value 'Z99_EXC_BUKRS' ##NO_TEXT.
+  constants MC_EXC_PERSA type PYD_PAR_TYPE value 'Z99_EXC_PERSA' ##NO_TEXT.
+  constants MC_EXC_BTRTL type PYD_PAR_TYPE value 'Z99_EXC_BTRTL' ##NO_TEXT.
+  constants MC_EXC_PERSG type PYD_PAR_TYPE value 'Z99_EXC_PERSG' ##NO_TEXT.
+  constants MC_EXC_PERSK type PYD_PAR_TYPE value 'Z99_EXC_PERSK' ##NO_TEXT.
+  constants MC_EXC_KOSTL type PYD_PAR_TYPE value 'Z99_EXC_KOSTL' ##NO_TEXT.
+  constants MC_EXC_USER_ID type PYD_PAR_TYPE value 'Z99_EXC_USER_ID' ##NO_TEXT.
+  constants MC_EXC_SPRPS type PYD_PAR_TYPE value 'Z99_EXC_SPRPS' ##NO_TEXT.
+  constants MC_EXC_INFTY type PYD_PAR_TYPE value 'Z99_EXC_INFTY' ##NO_TEXT.
+  constants MC_EXC_SUBTY type PYD_PAR_TYPE value 'Z99_EXC_SUBTY' ##NO_TEXT.
+  constants MC_EXC_LGART type PYD_PAR_TYPE value 'Z99_EXC_LGART' ##NO_TEXT.
+  constants MC_HYPHEN type PYD_NAME value ' - ' ##NO_TEXT.
+  constants MC_EQUAL type PYD_NAME value '=' ##NO_TEXT.
+  constants MC_TEXT_REASON type PYD_NAME value 'Reason' ##NO_TEXT.
+  constants MC_HIGH_DATE type DATUM value '99991231' ##NO_TEXT.
   constants:
     begin of mc_response_missing,
       msgid type symsgid value 'ZHRPY_PCC_MSG',
@@ -164,314 +166,315 @@ protected section.
       new       type zhrpyde_pcc_taskstatus value 'NEW',
       completed type zhrpyde_pcc_taskstatus value 'COMPL',
       errored   type zhrpyde_pcc_taskstatus value 'ERROR',
-    end of gcs_taskstatus.
-  data mo_context type ref to if_pyd_res_context .
-  data mv_payroll_area type abkrs .
-  data mv_payroll_period type iperi .
-  data mv_tpy_res type hrdct_is_tpy .
-  data mv_begda type datum .
-  data mv_endda type datum .
-  data mv_endda_plus1 type datum .
-  data mv_change_begda type datum .
-  data mt_stat2 type /iwbep/t_cod_select_options .
-  data mc_stat2_active type stat2 value '3' ##NO_TEXT.
-  data mt_bukrs type /iwbep/t_cod_select_options .
-  data mt_werks type /iwbep/t_cod_select_options .
-  data mt_btrtl type /iwbep/t_cod_select_options .
-  data mt_persg type /iwbep/t_cod_select_options .
-  data mt_persk type /iwbep/t_cod_select_options .
-  data mt_abkrs type /iwbep/t_cod_select_options .
-  data mt_kostl type /iwbep/t_cod_select_options .
-  data mt_uname type /iwbep/t_cod_select_options .
-  data mt_sprps type /iwbep/t_cod_select_options .
-  data mv_infty type infty .
-  data mv_subty type subty .
-  data mt_subty type /iwbep/t_cod_select_options .
-  data mv_lgart type lgart .
-  data mt_zpersgk type /iwbep/t_cod_select_options .
-  data mc_zpersgk type pyd_par_type value 'YK_PERSGK' ##NO_TEXT.
-  data mt_exec_parameters type if_pyd_fnd_types=>ty_t_resp .
-  data mv_curr type waers .
-  data mt_enriched_rt type ty_t_rt_with_text .
-  data mc_molga_au type molga value '13' ##NO_TEXT.
-  data mc_molga_nz type molga value '43' ##NO_TEXT.
-  data mt_payroll_areas type /iwbep/t_cod_select_options .
-  data mt_bukrs_curr type ty_t_bukrs_curr .
-  data mt_tcurx type trty_tcurx .
-  data mt_swt_lgart type /iwbep/t_cod_select_options .
-  data mv_swt_exc_retro type boolean .
-  data mv_rfc_jobs type i value 10 ##NO_TEXT.
-  data mv_rfc_snd_jobs type i value 1 ##NO_TEXT.
-  data mv_rfc_rcv_jobs type i value 1 ##NO_TEXT.
-  data mv_rfc_excp_flag type boolean .
-  data mv_rfc_parallel_process type xfeld .
-  data mv_rfc_msg type boolean value space ##NO_TEXT.
-  data mv_rfc_group type rzlli_apcl value 'PCC' ##NO_TEXT.
-  data mv_rfc_implemented type boolean .
-  data mv_task_num type numc4 .
-
+    end of gcs_taskstatus .
+  data MO_CONTEXT type ref to IF_PYD_RES_CONTEXT .
+  data MV_PAYROLL_AREA type ABKRS .
+  data MV_PAYROLL_PERIOD type IPERI .
+  data MV_TPY_RES type HRDCT_IS_TPY .
+  data MV_BEGDA type DATUM .
+  data MV_ENDDA type DATUM .
+  data MV_ENDDA_PLUS1 type DATUM .
+  data MV_CHANGE_BEGDA type DATUM .
+  data MT_STAT2 type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MC_STAT2_ACTIVE type STAT2 value '3' ##NO_TEXT.
+  data MT_BUKRS type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_WERKS type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_BTRTL type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_PERSG type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_PERSK type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_ABKRS type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_KOSTL type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_UNAME type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_SPRPS type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MV_INFTY2 type INFTY .
+  data MV_INFTY type INFTY .
+  data MV_SUBTY2 type SUBTY .
+  data MV_SUBTY type SUBTY .
+  data MT_SUBTY type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MV_LGART type LGART .
+  data MT_ZPERSGK type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MC_ZPERSGK type PYD_PAR_TYPE value 'YK_PERSGK' ##NO_TEXT.
+  data MT_EXEC_PARAMETERS type IF_PYD_FND_TYPES=>TY_T_RESP .
+  data MV_CURR type WAERS .
+  data MT_ENRICHED_RT type TY_T_RT_WITH_TEXT .
+  data MC_MOLGA_AU type MOLGA value '13' ##NO_TEXT.
+  data MC_MOLGA_NZ type MOLGA value '43' ##NO_TEXT.
+  data MT_PAYROLL_AREAS type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MT_BUKRS_CURR type TY_T_BUKRS_CURR .
+  data MT_TCURX type TRTY_TCURX .
+  data MT_SWT_LGART type /IWBEP/T_COD_SELECT_OPTIONS .
+  data MV_SWT_EXC_RETRO type BOOLEAN .
+  data MV_RFC_JOBS type I value 10 ##NO_TEXT.
+  data MV_RFC_SND_JOBS type I value 1 ##NO_TEXT.
+  data MV_RFC_RCV_JOBS type I value 1 ##NO_TEXT.
+  data MV_RFC_EXCP_FLAG type BOOLEAN .
+  data MV_RFC_PARALLEL_PROCESS type XFELD .
+  data MV_RFC_MSG type BOOLEAN value SPACE ##NO_TEXT.
+  data MV_RFC_GROUP type RZLLI_APCL value 'PCC' ##NO_TEXT.
+  data MV_RFC_IMPLEMENTED type BOOLEAN .
+  data MV_TASK_NUM type NUMC4 .
   data:
     begin of mv_task_name,
       name(22) type c,
       num      type numc4.
   data:end of mv_task_name .
-  data mv_debug type xfeld .
-  data mv_molga type molga .
+  data MV_DEBUG type XFELD .
+  data MV_MOLGA type MOLGA .
 
-  methods get_context
+  methods GET_CONTEXT
     returning
-      value(ro_result) type ref to if_pyd_res_context .
-  methods set_context
+      value(RO_RESULT) type ref to IF_PYD_RES_CONTEXT .
+  methods SET_CONTEXT
     importing
-      !io_context type ref to if_pyd_res_context .
-  methods get_tpy_res
+      !IO_CONTEXT type ref to IF_PYD_RES_CONTEXT .
+  methods GET_TPY_RES
     returning
-      value(rv_result) type hrdct_is_tpy .
-  methods get_payroll_area
+      value(RV_RESULT) type HRDCT_IS_TPY .
+  methods GET_PAYROLL_AREA
     returning
-      value(rv_result) type abkrs .
-  methods get_payroll_period
+      value(RV_RESULT) type ABKRS .
+  methods GET_PAYROLL_PERIOD
     returning
-      value(rv_result) type iperi .
-  methods get_payroll_period_info
+      value(RV_RESULT) type IPERI .
+  methods GET_PAYROLL_PERIOD_INFO
     returning
-      value(rs_result) type ty_s_period_info .
-  methods get_employee_status .
-  methods get_infty_and_subty .
-  methods get_specifc_custmizing
+      value(RS_RESULT) type TY_S_PERIOD_INFO .
+  methods GET_EMPLOYEE_STATUS .
+  methods GET_INFTY_AND_SUBTY .
+  methods GET_SPECIFC_CUSTMIZING
     importing
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context .
-  methods is_off_cycle_run
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT .
+  methods IS_OFF_CYCLE_RUN
     importing
-      !io_res_context  type ref to if_pyd_res_context
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
     returning
-      value(rv_result) type boole_d .
-  methods get_pernr_parameters
+      value(RV_RESULT) type BOOLE_D .
+  methods GET_PERNR_PARAMETERS
     importing
-      !it_par_addl     type if_pyd_ty_rt=>ty_t_result_key
+      !IT_PAR_ADDL type IF_PYD_TY_RT=>TY_T_RESULT_KEY
     returning
-      value(rt_result) type /iwbep/t_cod_select_options .
-  methods get_parameters
+      value(RT_RESULT) type /IWBEP/T_COD_SELECT_OPTIONS .
+  methods GET_PARAMETERS
     importing
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context .
-  methods get_persg_and_persk .
-  methods check
-        abstract
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT .
+  methods GET_PERSG_AND_PERSK .
+  methods CHECK
+  abstract
     importing
-      !is_ty           type pyd_d_ty
-      !is_inst         type ty_s_inst
-      !it_par          type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context  type ref to if_pyd_res_context
-      !it_par_addl     type if_pyd_ty_rt=>ty_t_result_key
-      !it_pernr_so     type /iwbep/t_cod_select_options
+      !IS_TY type PYD_D_TY
+      !IS_INST type TY_S_INST
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IT_PAR_ADDL type IF_PYD_TY_RT=>TY_T_RESULT_KEY
+      !IT_PERNR_SO type /IWBEP/T_COD_SELECT_OPTIONS
     returning
-      value(rt_result) type ty_t_result
+      value(RT_RESULT) type TY_T_RESULT
     raising
-      cx_pyd_fnd .
-  methods sap_sfo_get
+      CX_PYD_FND .
+  methods SAP_SFO_GET
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode .
-  methods sap_t_get
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE .
+  methods SAP_T_GET
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode .
-  methods sap_spo_get
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE .
+  methods SAP_SPO_GET
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode .
-  methods get_generic_sfo
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE .
+  methods GET_GENERIC_SFO
     returning
-      value(rt_result) type cl_pyd_rd_dto_sfo=>ty_t_rd .
-  methods adjust_sfo_texts
+      value(RT_RESULT) type CL_PYD_RD_DTO_SFO=>TY_T_RD .
+  methods ADJUST_SFO_TEXTS
     changing
-      !rt_result type cl_pyd_rd_dto_sfo=>ty_t_rd .
-  methods convert_to_date
+      !RT_RESULT type CL_PYD_RD_DTO_SFO=>TY_T_RD .
+  methods CONVERT_TO_DATE
     importing
-      !iv_date         type datum
+      !IV_DATE type DATUM
     returning
-      value(rv_result) type char10 .
-  methods get_bukrs .
-  methods get_lgart .
-  methods yk_emp_info
+      value(RV_RESULT) type CHAR10 .
+  methods GET_BUKRS .
+  methods GET_LGART .
+  methods YK_EMP_INFO
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     raising
-      cx_pyd_fnd .
-  methods yk_wage_type_report
+      CX_PYD_FND .
+  methods YK_WAGE_TYPE_REPORT
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     exporting
-      !et_rt          type ty_t_rt_with_text
+      !ET_RT type TY_T_RT_WITH_TEXT
     raising
-      cx_pyd_fnd .
-  methods yk_audit_report
+      CX_PYD_FND .
+  methods YK_AUDIT_REPORT
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     raising
-      cx_pyd_fnd .
-  methods yk_payslip
+      CX_PYD_FND .
+  methods YK_PAYSLIP
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     raising
-      cx_pyd_fnd .
-  methods yk_payroll_log
+      CX_PYD_FND .
+  methods YK_PAYROLL_LOG
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     raising
-      cx_pyd_fnd .
-  methods yk_cats_info
+      CX_PYD_FND .
+  methods YK_CATS_INFO
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     raising
-      cx_pyd_fnd .
-  methods filter_result_on_emp_status
+      CX_PYD_FND .
+  methods FILTER_RESULT_ON_EMP_STATUS
     changing
-      !ct_result type ty_t_result .
-  methods get_payroll_areas .
-  methods get_currency
+      !CT_RESULT type TY_T_RESULT .
+  methods GET_PAYROLL_AREAS .
+  methods GET_CURRENCY
     importing
-      !iv_molga      type molga
-      !iv_endda      type datum
+      !IV_MOLGA type MOLGA
+      !IV_ENDDA type DATUM
     returning
-      value(rv_curr) type waers .
-  methods get_currency_by_pernr
+      value(RV_CURR) type WAERS .
+  methods GET_CURRENCY_BY_PERNR
     importing
-      !iv_pernr      type p_pernr
-      !iv_endda      type datum
+      !IV_PERNR type P_PERNR
+      !IV_ENDDA type DATUM
     returning
-      value(rv_curr) type waers .
-  methods convert_maxbt
+      value(RV_CURR) type WAERS .
+  methods CONVERT_MAXBT
     importing
-      !iv_currency type tcurc-waers
-      !iv_amount   type maxbt
+      !IV_CURRENCY type TCURC-WAERS
+      !IV_AMOUNT type MAXBT
     exporting
-      !ev_maxbt    type maxbt
+      !EV_MAXBT type MAXBT
     raising
-      cx_sql_exception .
-  methods get_standard_parameters .
-  methods read_range_parameter
+      CX_SQL_EXCEPTION .
+  methods GET_STANDARD_PARAMETERS .
+  methods READ_RANGE_PARAMETER
     importing
-      !iv_inc_par_type  type pyd_par_type optional
-      !iv_exc_par_type  type pyd_par_type optional
+      !IV_INC_PAR_TYPE type PYD_PAR_TYPE optional
+      !IV_EXC_PAR_TYPE type PYD_PAR_TYPE optional
     changing
-      !ct_parameter_tab type /iwbep/t_cod_select_options .
-  methods set_so_exc_fixed_value
+      !CT_PARAMETER_TAB type /IWBEP/T_COD_SELECT_OPTIONS .
+  methods SET_SO_EXC_FIXED_VALUE
     importing
-      !iv_value    type any
+      !IV_VALUE type ANY
     returning
-      value(rt_so) type /iwbep/t_cod_select_options .
-  methods read_all_relevant_employees
+      value(RT_SO) type /IWBEP/T_COD_SELECT_OPTIONS .
+  methods READ_ALL_RELEVANT_EMPLOYEES
     exporting
-      !rt_pernr_range type hr99s_pernr_range .
-  methods read_emp_orginfo
+      !RT_PERNR_RANGE type HR99S_PERNR_RANGE .
+  methods READ_EMP_ORGINFO
     importing
-      !iv_pernr      type pernr_d
+      !IV_PERNR type PERNR_D
     exporting
-      !ev_persa      type werks
-      !ev_persa_text type pbtxt
-      !ev_btrtl      type btrtl
-      !ev_btrtl_text type btrtx
+      !EV_PERSA type WERKS
+      !EV_PERSA_TEXT type PBTXT
+      !EV_BTRTL type BTRTL
+      !EV_BTRTL_TEXT type BTRTX
     raising
-      cx_pyd_fnd .
-  methods add_record_to_sfo_tab
+      CX_PYD_FND .
+  methods ADD_RECORD_TO_SFO_TAB
     importing
-      !iv_itemid                   type cl_pyd_rd_dto_sfo=>ty_s_rd-itemid
-      !iv_text                     type cl_pyd_rd_dto_sfo=>ty_s_rd-text
-      !iv_value                    type string
-      !iv_text_for_1st_record_only type abap_bool default abap_true
+      !IV_ITEMID type CL_PYD_RD_DTO_SFO=>TY_S_RD-ITEMID
+      !IV_TEXT type CL_PYD_RD_DTO_SFO=>TY_S_RD-TEXT
+      !IV_VALUE type STRING
+      !IV_TEXT_FOR_1ST_RECORD_ONLY type ABAP_BOOL default ABAP_TRUE
     changing
-      !ct_sfo_tab                  type cl_pyd_rd_dto_sfo=>ty_t_rd .
-  methods copy_structure_to_other
+      !CT_SFO_TAB type CL_PYD_RD_DTO_SFO=>TY_T_RD .
+  methods COPY_STRUCTURE_TO_OTHER
     importing
-      !p_struct1 type any
+      !P_STRUCT1 type ANY
     changing
-      !p_struct2 type any .
-  methods sap_swt
+      !P_STRUCT2 type ANY .
+  methods SAP_SWT
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     exporting
-      !et_rt          type ty_t_rt_with_text
+      !ET_RT type TY_T_RT_WITH_TEXT
     raising
-      cx_pyd_fnd .
-  methods multithread_process
+      CX_PYD_FND .
+  methods MULTITHREAD_PROCESS
     importing
-      !iv_clsname type seoclsname
-      !it_pernr   type tty_pernr .
-  methods submit_isolated_task
+      !IV_CLSNAME type SEOCLSNAME
+      !IT_PERNR type TTY_PERNR .
+  methods SUBMIT_ISOLATED_TASK
     importing
-      !iv_guid_22           type guid_22
-      !iv_clsname           type seoclsname
-      !it_pernr_range       type hr99s_pernr_range
+      !IV_GUID_22 type GUID_22
+      !IV_CLSNAME type SEOCLSNAME
+      !IT_PERNR_RANGE type HR99S_PERNR_RANGE
     changing
-      !iv_serialized_object type zhrpy_de_pcc_objdata .
-  methods convert_objdata
+      !IV_SERIALIZED_OBJECT type ZHRPY_DE_PCC_OBJDATA .
+  methods CONVERT_OBJDATA
     importing
-      !is_objdata       type ty_objdata
+      !IS_OBJDATA type TY_OBJDATA
     changing
-      !io_cloned_object type any
+      !IO_CLONED_OBJECT type ANY
     raising
-      cx_pyd_fnd .
-  methods write_result_for_check_test
+      CX_PYD_FND .
+  methods WRITE_RESULT_FOR_CHECK_TEST
     importing
-      !it_result type ty_t_result .
-  methods get_rca_tpy_payslip
+      !IT_RESULT type TY_T_RESULT .
+  methods GET_RCA_TPY_PAYSLIP
     importing
-      !iv_pernr        type persno
+      !IV_PERNR type PERSNO
     returning
-      value(rt_stream) type cl_pyc_rd_dto_stream=>ty_t_rd .
-  methods get_rca_prod_payslip
+      value(RT_STREAM) type CL_PYC_RD_DTO_STREAM=>TY_T_RD .
+  methods GET_RCA_PROD_PAYSLIP
     importing
-      !iv_pernr        type persno
-      !iv_per          type char1
+      !IV_PERNR type PERSNO
+      !IV_PER type CHAR1
     returning
-      value(rt_result) type cl_pyc_rd_dto_stream=>ty_t_rd .
-  methods get_rca_fallback_form
+      value(RT_RESULT) type CL_PYC_RD_DTO_STREAM=>TY_T_RD .
+  methods GET_RCA_FALLBACK_FORM
     importing
-      !iv_form         type fpname
+      !IV_FORM type FPNAME
     returning
-      value(rt_result) type cl_pyc_rd_dto_stream=>ty_t_rd .
-  methods z99_payslip
+      value(RT_RESULT) type CL_PYC_RD_DTO_STREAM=>TY_T_RD .
+  methods Z99_PAYSLIP
     importing
-      !is_rd          type if_pyd_fnd_types=>ty_s_rd
-      !it_par         type if_pyd_fnd_types=>ty_t_resp
-      !io_res_context type ref to if_pyd_res_context
-      !iv_access_mode type pyd_rdt_data_access_mode
+      !IS_RD type IF_PYD_FND_TYPES=>TY_S_RD
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+      !IO_RES_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_ACCESS_MODE type PYD_RDT_DATA_ACCESS_MODE
     raising
-      cx_pyd_fnd .
-  methods check_avail_server .
+      CX_PYD_FND .
+  methods CHECK_AVAIL_SERVER .
 
-  methods err_kv_get_list
-      redefinition .
+  methods ERR_KV_GET_LIST
+    redefinition .
   private section.
 ENDCLASS.
 
@@ -903,6 +906,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
         "Get the current run mode of the process (Test/production).
         me->mv_lgart = cl_pyd_fnd_aux=>get_resp_fixed_value( iv_par_type = me->mc_lgart
                                                              it_par      = me->get_context( )->mt_par ).
+
       catch cx_root.
         return.
     endtry.
@@ -1714,6 +1718,10 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
                                                           it_par      = mo_context->mt_par ).
         mv_subty =  cl_pyd_fnd_aux=>get_resp_fixed_value( iv_par_type = me->mc_subty
                                                           it_par      = mo_context->mt_par ).
+        mv_infty2 =  cl_pyd_fnd_aux=>get_resp_fixed_value( iv_par_type = me->mc_infty2
+                                                          it_par      = mo_context->mt_par ).
+        mv_subty2 =  cl_pyd_fnd_aux=>get_resp_fixed_value( iv_par_type = me->mc_subty2
+                                                          it_par      = mo_context->mt_par ).
       catch cx_pyd_fnd into data(lo_exception).
     endtry.
 
@@ -1832,7 +1840,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
 *    |            |         |Reporting                  |             *
 *---------------------------------------------------------------------*
     data lt_sh_pernrs_so type /iwbep/t_cod_select_options.
-BREAK-POINT.
+
 *   Off-cycle does not support in this runtime class
     if is_off_cycle_run( io_res_context = io_res_context ) = abap_true.
       return.

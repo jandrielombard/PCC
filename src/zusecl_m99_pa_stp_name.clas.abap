@@ -76,7 +76,7 @@ ENDCLASS.
 CLASS ZUSECL_M99_PA_STP_NAME IMPLEMENTATION.
 
 
-  method CHECK.
+  method check.
 * STP Data with Special Characters
     data: lo_regex   type ref to cl_abap_regex,
           lo_matcher type ref to cl_abap_matcher.
@@ -143,6 +143,7 @@ CLASS ZUSECL_M99_PA_STP_NAME IMPLEMENTATION.
        and it0001~persk in @mt_persk
        and it0001~kostl in @mt_kostl .
 
+
 * Identify Special Chrectors in IT0002 fields
 * Create Pattren
     lv_pat = mc_it2char_pattern .
@@ -150,24 +151,32 @@ CLASS ZUSECL_M99_PA_STP_NAME IMPLEMENTATION.
       exporting
         pattern     = lv_pat
         ignore_case = abap_false.
-    loop at lt_it2_stpdata into ls_it2_stpdata.
-      clear: ls_stperr_dtls.
-      move: ls_it2_stpdata-pernr to ls_stperr_dtls-pernr,
-            c_0002 to ls_stperr_dtls-tabname.
-      lo_matcher = lo_regex->create_matcher( text =  ls_it2_stpdata-nachn ).
-      if lo_matcher->match( ) is initial.
-        move c_nachn to ls_stperr_dtls-fieldname.
-        append ls_stperr_dtls to lt_stperr_dtls.
-      endif.
-      lo_matcher = lo_regex->create_matcher( text =  ls_it2_stpdata-vorna ).
-      if lo_matcher->match( ) is initial.
-        move c_vorna to ls_stperr_dtls-fieldname.
-        append ls_stperr_dtls to lt_stperr_dtls.
-      endif.
-      lo_matcher = lo_regex->create_matcher( text =  ls_it2_stpdata-midnm ).
-      if lo_matcher->match( ) is initial.
-        move c_midnm to ls_stperr_dtls-fieldname.
-        append ls_stperr_dtls to lt_stperr_dtls.
+    loop at it_pernr_so assigning field-symbol(<person>).
+      read table lt_it2_stpdata into ls_it2_stpdata with key pernr = <person>-low.  "check if person has an infotype 0002
+      if sy-subrc = 0.
+         write <person>-low.
+*      loop at lt_it2_stpdata into ls_it2_stpdata.
+        clear: ls_stperr_dtls.
+        move: ls_it2_stpdata-pernr to ls_stperr_dtls-pernr,
+              c_0002 to ls_stperr_dtls-tabname.
+        lo_matcher = lo_regex->create_matcher( text =  ls_it2_stpdata-nachn ).
+        if lo_matcher->match( ) is initial.
+          move c_nachn to ls_stperr_dtls-fieldname.
+          append ls_stperr_dtls to lt_stperr_dtls.
+        endif.
+        lo_matcher = lo_regex->create_matcher( text =  ls_it2_stpdata-vorna ).
+        if lo_matcher->match( ) is initial.
+          move c_vorna to ls_stperr_dtls-fieldname.
+          append ls_stperr_dtls to lt_stperr_dtls.
+        endif.
+        lo_matcher = lo_regex->create_matcher( text =  ls_it2_stpdata-midnm ).
+        if lo_matcher->match( ) is initial.
+          move c_midnm to ls_stperr_dtls-fieldname.
+          append ls_stperr_dtls to lt_stperr_dtls.
+        endif.
+      else.
+         append <person>-low to lt_stperr_dtls.
+         write <person>-low.
       endif.
     endloop.
 
