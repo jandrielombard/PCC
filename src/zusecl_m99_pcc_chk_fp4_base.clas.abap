@@ -2056,7 +2056,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
           ).
 *<<< WOW Specific Code
       when 'YK_PAYSLIP'.
-        yk_payslip(
+        z99_payslip(
         exporting
           is_rd          = is_rd    " Result Detail Generic
           it_par         = it_par    " Result Parameter List
@@ -3886,7 +3886,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
       lv_ls_nm     type string,
       lv_list_name type char12 value 'PCC_CHK_NM'.
 
- message x000(ZHRAU_RPT).
+* message x000(ZHRAU_RPT).
 
     clear lt_rt .
     lv_pernr  = is_rd-id.
@@ -3933,7 +3933,7 @@ CLASS ZUSECL_M99_PCC_CHK_FP4_BASE IMPLEMENTATION.
     "  READ TABLE a_it_filtered_rgdir INTO wa_rgdir INDEX 1.
     wa_rgdir = ls_a_it_filtered_rgdir.
     if sy-subrc eq 0.
-      hrform_name = 'SAP_PAYSLIP_US'.
+      hrform_name = 'ZAEC_PAYSLIP'.
 
       mo_payslip_helper->get_payslip(
           exporting

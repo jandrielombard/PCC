@@ -15,9 +15,7 @@
     <SCRTEXT_S>Run Date</SCRTEXT_S>
     <SCRTEXT_M>Program Run Date</SCRTEXT_M>
     <SCRTEXT_L>Program Run Date</SCRTEXT_L>
-    <ACTFLAG>I</ACTFLAG>
     <DTELMASTER>E</DTELMASTER>
-    <RESERVEDTE>JB</RESERVEDTE>
     <REFKIND>D</REFKIND>
    </DD04V>
   </asx:values>
