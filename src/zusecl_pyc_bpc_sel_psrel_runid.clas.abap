@@ -8,32 +8,32 @@ public section.
 
   types:
     tty_runid type table of p_evnum .
-  protected section.
+protected section.
 
-    constants gc_evattr_akper type pevat-attr value 'AKPER' ##NO_TEXT.
-    constants:
-      begin of gc_par_type,
+  constants GC_EVATTR_AKPER type PEVAT-ATTR value 'AKPER' ##NO_TEXT.
+  constants:
+    begin of gc_par_type,
         abkrs  type pyd_par_type value 'ABKRS',
         period type pyd_par_type value 'PERIOD',
         slasg  type c value '/',
       end of gc_par_type .
-    constants gc_slash type c value '/' ##NO_TEXT.
-    constants mc_post_doc_parallel type pyc_proc_step_template_id value 'ZHR_V2_POST_DOC_PARALLEL' ##NO_TEXT.
+  constants GC_SLASH type C value '/' ##NO_TEXT.
+  constants MC_POST_DOC_PARALLEL type PYC_PROC_STEP_TEMPLATE_ID value 'ZUSE_PYP_V2_POST_DOC' ##NO_TEXT.
 
-    methods get_run_numbers
-      importing
-        !io_context     type ref to if_pyd_res_context
-        !iv_shadow_id   type pyd_shadow_id
-      exporting
-        value(rt_runid) type tty_runid .
-    methods get_posting_job_details
-      importing
-        !it_par               type if_pyd_fnd_types=>ty_t_resp
-      returning
-        value(et_jobs_detail) type tbtcjob_tt .
+  methods GET_RUN_NUMBERS
+    importing
+      !IO_CONTEXT type ref to IF_PYD_RES_CONTEXT
+      !IV_SHADOW_ID type PYD_SHADOW_ID
+    exporting
+      value(RT_RUNID) type TTY_RUNID .
+  methods GET_POSTING_JOB_DETAILS
+    importing
+      !IT_PAR type IF_PYD_FND_TYPES=>TY_T_RESP
+    returning
+      value(ET_JOBS_DETAIL) type TBTCJOB_TT .
 
-    methods get_other_params
-        redefinition .
+  methods GET_OTHER_PARAMS
+    redefinition .
   private section.
 ENDCLASS.
 

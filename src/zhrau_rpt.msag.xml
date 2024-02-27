@@ -85,6 +85,30 @@
      <MSGNR>022</MSGNR>
      <TEXT>No spool file found. Please try again</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>050</MSGNR>
+     <TEXT>Payrun not yet posted</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>051</MSGNR>
+     <TEXT>Selected run is a simulation run</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>052</MSGNR>
+     <TEXT>No runids found for period &amp;1 in status &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZHRAU_RPT</ARBGB>
+     <MSGNR>053</MSGNR>
+     <TEXT>More than one runids found for period &amp;1 status &amp;2</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>

@@ -484,7 +484,7 @@ CLASS ZUSECL_M99_PCC_MDLOG_EHIUPDATE IMPLEMENTATION.
   endmethod.
 
 
-  method SUBMIT_MDLOG_EHIUPDATE.
+  method submit_mdlog_ehiupdate.
 * Use Process Instance to read Process steps
     constants: mc_pty_program     type pyd_d_instp-par_type value 'PROGRAM',
                mc_payroll_program type pyd_d_instp-low value 'RPCALCQ0',
@@ -529,8 +529,8 @@ CLASS ZUSECL_M99_PCC_MDLOG_EHIUPDATE IMPLEMENTATION.
     data: begin of ls_pyd_d_al,
             instid       type pyd_instid,
             par_hash     type pyd_parhash,
-            tsl           type timestampl,
-            trigger_rdt   type pyd_rd_type,
+            tsl          type timestampl,
+            trigger_rdt  type pyd_rd_type,
             reserved_id2 type char40,
           end of ls_pyd_d_al.
     data: lt_pyd_d_al like table of ls_pyd_d_al.
@@ -693,25 +693,23 @@ CLASS ZUSECL_M99_PCC_MDLOG_EHIUPDATE IMPLEMENTATION.
 
 * Start Time
     if not lv_pyd_d_al_tsl is initial.
-      move lv_pyd_d_al_tsl to lv_tstamps.
-* As a precautionary step add 180 seconds to cover daemon job processing period
-      call function 'TIMESTAMP_DURATION_ADD'
+*      move lv_pyd_d_al_tsl to lv_tstamps.
+*     As a precautionary step add 180 seconds to cover daemon job processing period
+      data tsl_earlier type timestampl.
+      cl_abap_tstmp=>subtractsecs(
         exporting
-          timestamp_in    = lv_tstamps
-          duration        = -180
-        importing
-          timestamp_out   = lv_tstamps
-        exceptions
-          timestamp_error = 1
-          others          = 2.
+          tstmp   =   lv_pyd_d_al_tsl    " UTC Time Stamp
+          secs    =   '15'               " Time Interval in Seconds
+         receiving
+           r_tstmp =    tsl_earlier   ).        " UTC Time Stamp
 
-      call function 'IB_CONVERT_FROM_TIMESTAMP'
-        exporting
-          i_timestamp = lv_tstamps
-          i_tzone     = gc_utc
-        importing
-          e_datlo     = lv_start_date
-          e_timlo     = lv_start_time.
+
+      convert time stamp tsl_earlier time zone gc_utc
+       into date lv_start_date time lv_start_time.
+
+      if not sy-subrc is initial.
+        message x096(iq).
+      endif.
     else.
       lv_start_date = syst-datum.
       lv_start_time = syst-uzeit.
